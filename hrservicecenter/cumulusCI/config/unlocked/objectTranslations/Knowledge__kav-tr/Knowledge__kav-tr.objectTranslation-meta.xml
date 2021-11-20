@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <name>HR_Benefits</name>
+        <label>İK - Yan Yardımlar</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_Employee_Relations</name>
+        <label>İK - Çalışan İlişkileri</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_General</name>
+        <label>İK - Genel</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_Leave</name>
+        <label>İK - İzin</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_Onboarding</name>
+        <label>İK - İşe Alıştırma</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_Payroll</name>
+        <label>İK - Bordro</label>
+    </recordTypes>
+</CustomObjectTranslation>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <name>Community_Page_Onboarding_Header</name>
+        <label>Kennismaking met uw team voor Onboarding</label>
+    </customLabels>
+    <customLabels>
+        <name>Flow_Onboarding_Checklist_Header</name>
+        <label>Mijn controlelijst voor Onboarding</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Mark_Task_As_Completed</name>
+        <label>Taak aanduiden als voltooid</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Next</name>
+        <label>Volgende</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Previous</name>
+        <label>Vorige</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Save</name>
+        <label>Opslaan</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Submit</name>
+        <label>Indienen</label>
+    </customLabels>
+    <customLabels>
+        <name>Onboarding_Page_Contact_Name_HR_Contact</name>
+        <label>Uw HR-contactpersoon</label>
+    </customLabels>
+    <customLabels>
+        <name>Onboarding_Page_Contact_Name_HR_Manager</name>
+        <label>Uw HR-manager</label>
+    </customLabels>
+    <customLabels>
+        <name>Tasks_On_Employee_Related_List_Header</name>
+        <label>Taken voor Onboarding</label>
+    </customLabels>
+    <customLabels>
+        <name>Tasks_On_Employee_Related_List_No_Tasks_Found</name>
+        <label>Geen taken voor Onboarding gevonden.</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Hero_Banner_Header</name>
+        <label>Welkom, {{firstName}}!</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_Header_Tasks_Completed</name>
+        <label>Taken voor Onboarding</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_Header_Tasks_Open</name>
+        <label>Laten we u aan de slag helpen!</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_Open_Tasks</name>
+        <label>Open taken</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_See_All_Tasks</name>
+        <label>Alle taken bekijken</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_Subheader_Tasks_Completed</name>
+        <label>Het lijkt wel of je stress hebt!</label>
+    </customLabels>
+    <flowDefinitions>
+        <flows>
+            <fullName>Sample_welcome_video</fullName>
+            <label>Welkomstvideo</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;[Voorbeeld] Welkom bij het team! Bekijk deze video om meer over ons te weten te komen.&amp;nbsp; &lt;/p&gt;</fieldText>
+                    <name>Body</name>
+                </fields>
+                <name>Onboarding_Video_Screen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;b&gt;Ziet er goed uit!&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;Prima manier om het lijstje af te werken. Ga zo door!&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+                    <name>Complete_Display_Text</name>
+                </fields>
+                <name>Thank_You_Screen</name>
+            </screens>
+        </flows>
+        <fullName>Sample_welcome_video</fullName>
+        <label>Welkomstvideo</label>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Sample_ergonomic_assessment</fullName>
+            <label>[Voorbeeld] Ergonomische beoordeling</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;[Voorbeeld]&lt;span style=&quot;background-color: transparent; color: rgb(0, 0, 0); font-family: Arial; font-size: 11pt;&quot;&gt; &lt;/span&gt;&lt;a href=&quot;/sample/s/case/{!CreateCase}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Case {!GetCaseRecord.CaseNumber}&lt;/a&gt; is voor u gemaakt. Een HR-specialist neemt contact met u op. Ga naar &lt;a href=&quot;/sample/s/case/Case/Default&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Mijn cases&lt;/a&gt; om de huidige status te controleren.&lt;/p&gt;</fieldText>
+                    <name>Confirmation_Message</name>
+                </fields>
+                <name>Confirmation_Screen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;[Voorbeeld] De ergonomie van uw thuiskantoor is belangrijk. We hebben een team van experts die kunnen helpen bij het beoordelen van uw situatie en voor u voorstellen kunnen doen voor apparatuur voor uw thuiskantoor.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Klik op ‘Volgende’ om door te gaan.&lt;/p&gt;</fieldText>
+                    <name>General_Information</name>
+                </fields>
+                <name>General_Info</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;Upload een foto van uw werkplek en klik op Indienen. Zorg ervoor dat u geen gevoelige of persoonlijke gegevens in uw foto opneemt.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Er wordt een case voor u gemaakt en een HR-specialist neemt dan contact met u op.&lt;/p&gt;</fieldText>
+                    <name>General_Information2</name>
+                </fields>
+                <name>Upload_Files</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(247, 3, 3);&quot;&gt;U moet minstens één bestand toevoegen om door te gaan. &lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>Error_Message</name>
+                </fields>
+                <name>Validation</name>
+            </screens>
+        </flows>
+        <fullName>Sample_ergonomic_assessment</fullName>
+        <label>[Voorbeeld] Ergonomische beoordeling</label>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>AssignOnboardingTasks</fullName>
+            <label>Taken voor Onboarding toewijzen</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;color: rgb(0, 0, 0); background-color: transparent; font-size: 16px;&quot;&gt;Toewijzen van taken voor Onboarding geslaagd!&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: transparent; font-size: 14px;&quot;&gt;Ga voor het bekijken van de taken voor Onboarding naar de record van de medewerker.&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>Complete_Display_Text_0_0</name>
+                </fields>
+                <name>Confirmation_Screen_0</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;HR-servicecentrum ondersteunt sjablonen voor onboarding in bulk. Selecteer voor het starten van het proces van onboarding uw sjablonen en klik vervolgens op Toewijzen.&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>AssignObBoardingTexBody</name>
+                </fields>
+                <fields>
+                    <fieldText>Selecteer sjablonen voor Onboarding.</fieldText>
+                    <name>Select_onboarding_templates</name>
+                </fields>
+                <name>Multi_select_Onboarding_Templates</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;Geen actieve sjabloon voor Onboarding gevonden!&lt;/p&gt;</fieldText>
+                    <name>NoActiveOnBoardingTemplatetext</name>
+                </fields>
+                <name>Thank_You_Screen</name>
+            </screens>
+        </flows>
+        <fullName>AssignOnboardingTasks</fullName>
+        <label>Taken voor Onboarding toewijzen</label>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Review_Documents</fullName>
+            <label>Documenten beoordelen</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;[Voorbeeld] Aan u en uw manager is een e-mailbericht verzonden.&lt;/p&gt;</fieldText>
+                    <name>Confirmation_Page_Content</name>
+                </fields>
+                <name>ConfirmationPage</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;Over ons&lt;/p&gt;</fieldText>
+                    <name>HeaderTop</name>
+                </fields>
+                <fields>
+                    <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);&quot;&gt;[Voorbeeld] &lt;/span&gt;&lt;a href=&quot;https://salesforce.com/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Bedrijfshistorie&lt;/a&gt;&lt;/p&gt;&lt;p&gt;[Voorbeeld] Neem even de tijd om onze bedrijfshistorie te leren kennen.&lt;/p&gt;</fieldText>
+                    <name>Body1</name>
+                </fields>
+                <fields>
+                    <fieldText>Ik snap het!</fieldText>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;U moet instemmen met indienen.&lt;/p&gt;</errorMessage>
+                    </validationRule>
+                    <name>Checkbox1</name>
+                </fields>
+                <fields>
+                    <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255);&quot;&gt;[Voorbeeld] &lt;/span&gt;&lt;a href=&quot;https://salesforce.com/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Bedrijfsverlofdagen&lt;/a&gt;&lt;/p&gt;&lt;p&gt;[Voorbeeld] Plan uw verlofdagen in het vooruit.&lt;/p&gt;</fieldText>
+                    <name>Body2</name>
+                </fields>
+                <fields>
+                    <fieldText>Ik snap het!</fieldText>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;U moet instemmen met indienen.&lt;/p&gt;</errorMessage>
+                    </validationRule>
+                    <name>Checkbox2</name>
+                </fields>
+                <fields>
+                    <fieldText>&lt;p&gt;[Voorbeeld] Klik op Indienen; u en uw manager ontvangen dan een e-mailbericht met de bevestiging van uw controle van deze informatie.&lt;/p&gt;</fieldText>
+                    <name>Body3</name>
+                </fields>
+                <name>Review_Documents</name>
+            </screens>
+        </flows>
+        <fullName>Review_Documents</fullName>
+        <label>Documenten beoordelen</label>
+    </flowDefinitions>
+    <quickActions>
+        <name>Employee.AssignOnboarding</name>
+        <label>Onboarding toewijzen</label>
+    </quickActions>
+</Translations>

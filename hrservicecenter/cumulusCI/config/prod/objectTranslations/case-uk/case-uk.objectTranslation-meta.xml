@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <name>HR_Benefits</name>
+        <label>Відділ кадрів - Бонуси</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_Employee_Relations</name>
+        <label>Відділ кадрів - Взаємозв&apos;язки працівників</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_General</name>
+        <label>Відділ кадрів - Загальне</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_Leave</name>
+        <label>Відділ кадрів - Відпустка</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_Onboarding</name>
+        <label>Відділ кадрів - Адаптація</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_Payroll</name>
+        <label>Відділ кадрів - Платіжна відомість</label>
+    </recordTypes>
+</CustomObjectTranslation>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <name>Community_Page_Onboarding_Header</name>
+        <label>Träffa ditt onboardningteam</label>
+    </customLabels>
+    <customLabels>
+        <name>Flow_Onboarding_Checklist_Header</name>
+        <label>Checklista för min onboarding</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Mark_Task_As_Completed</name>
+        <label>Markera uppgift som genomförd</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Next</name>
+        <label>Nästa</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Previous</name>
+        <label>Föregående</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Save</name>
+        <label>Spara</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Submit</name>
+        <label>Skicka</label>
+    </customLabels>
+    <customLabels>
+        <name>Onboarding_Page_Contact_Name_HR_Contact</name>
+        <label>Din HR-kontakt</label>
+    </customLabels>
+    <customLabels>
+        <name>Onboarding_Page_Contact_Name_HR_Manager</name>
+        <label>Din HR-chef</label>
+    </customLabels>
+    <customLabels>
+        <name>Tasks_On_Employee_Related_List_Header</name>
+        <label>Onboardinguppgifter</label>
+    </customLabels>
+    <customLabels>
+        <name>Tasks_On_Employee_Related_List_No_Tasks_Found</name>
+        <label>Inga onboardinguppgifter hittades</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Hero_Banner_Header</name>
+        <label>Välkommen, {{firstName}}!</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_Header_Tasks_Completed</name>
+        <label>Onboardinguppgifter</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_Header_Tasks_Open</name>
+        <label>Låt oss börja sätta igång!</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_Open_Tasks</name>
+        <label>Öppna uppgifter</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_See_All_Tasks</name>
+        <label>Se alla uppgifter</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_Subheader_Tasks_Completed</name>
+        <label>Du har kommit ikapp!</label>
+    </customLabels>
+    <flowDefinitions>
+        <flows>
+            <fullName>Sample_welcome_video</fullName>
+            <label>Välkomstvideo</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;[Sample] Välkommen till teamet! Titta på denna video för att lära dig mer om vår historia.&amp;nbsp; &lt;/p&gt;</fieldText>
+                    <name>Body</name>
+                </fields>
+                <name>Onboarding_Video_Screen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;b&gt;Ser bra ut&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;Bra sätt att bocka av saker på listan. Fortsätt så!&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+                    <name>Complete_Display_Text</name>
+                </fields>
+                <name>Thank_You_Screen</name>
+            </screens>
+        </flows>
+        <fullName>Sample_welcome_video</fullName>
+        <label>Välkomstvideo</label>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Sample_ergonomic_assessment</fullName>
+            <label>[Prov] Ergonomisk bedömning</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;[Sample]&lt;span style=&quot;background-color: transparent; color: rgb(0, 0, 0); font-family: Arial; font-size: 11pt;&quot;&gt; &lt;/span&gt;&lt;a href=&quot;/sample/s/case/{!CreateCase}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Ärende {!GetCaseRecord.CaseNumber}&lt;/a&gt; har skapats åt dig. En HR-specialist kommer att kontakta dig. Gå till &lt;a href=&quot;/sample/s/case/Case/Default&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Mina ärenden&lt;/a&gt; för att kontrollera aktuell status.&lt;/p&gt;</fieldText>
+                    <name>Confirmation_Message</name>
+                </fields>
+                <name>Confirmation_Screen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;[Sample] Ergonomi på ditt hemmakontor är viktigt. Vi har ett team av experter som kan hjälpa dig att bedöma din situation och föreslå utrustning för hemmakontoret.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Klicka på ”Nästa” för att fortsätta.&lt;/p&gt;</fieldText>
+                    <name>General_Information</name>
+                </fields>
+                <name>General_Info</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;Ladda upp en bild av ditt arbetsområde och klicka på Skicka in. Se till att inte ha med känslig eller personlig information på din bild.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Ett ärende skapas för dig och en HR-specialist kommer att kontakta dig.&lt;/p&gt;</fieldText>
+                    <name>General_Information2</name>
+                </fields>
+                <name>Upload_Files</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(247, 3, 3);&quot;&gt;Du behöver bifoga minst en fil för att fortsätta. &lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>Error_Message</name>
+                </fields>
+                <name>Validation</name>
+            </screens>
+        </flows>
+        <fullName>Sample_ergonomic_assessment</fullName>
+        <label>[Prov] Ergonomisk bedömning</label>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>AssignOnboardingTasks</fullName>
+            <label>Tilldela onboardinguppgifter</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;color: rgb(0, 0, 0); background-color: transparent; font-size: 16px;&quot;&gt;Onboardinguppgifter har tilldelats!&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: transparent; font-size: 14px;&quot;&gt;För att visa status för onboardinguppgifter, gå till den anställdas post.&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>Complete_Display_Text_0_0</name>
+                </fields>
+                <name>Confirmation_Screen_0</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;HR-servicecenter stöder mallar för massonboarding. För att påbörja onboardingprocessen, välj dina mallar och klicka sedan på Tilldela,&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>AssignObBoardingTexBody</name>
+                </fields>
+                <fields>
+                    <fieldText>Välj onboardingmallar.</fieldText>
+                    <name>Select_onboarding_templates</name>
+                </fields>
+                <name>Multi_select_Onboarding_Templates</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;Ingen aktiv onboardingmall hittades!&lt;/p&gt;</fieldText>
+                    <name>NoActiveOnBoardingTemplatetext</name>
+                </fields>
+                <name>Thank_You_Screen</name>
+            </screens>
+        </flows>
+        <fullName>AssignOnboardingTasks</fullName>
+        <label>Tilldela onboardinguppgifter</label>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Review_Documents</fullName>
+            <label>Granska dokument</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;[Sample] En e-post har skickats till dig och din chef.&lt;/p&gt;</fieldText>
+                    <name>Confirmation_Page_Content</name>
+                </fields>
+                <name>ConfirmationPage</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;Om oss&lt;/p&gt;</fieldText>
+                    <name>HeaderTop</name>
+                </fields>
+                <fields>
+                    <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);&quot;&gt;[Sample] &lt;/span&gt;&lt;a href=&quot;https://salesforce.com/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Företagshistorik&lt;/a&gt;&lt;/p&gt;&lt;p&gt;[Sample] Ta dig tid för att bekanta dig med vår företagshistoria.&lt;/p&gt;</fieldText>
+                    <name>Body1</name>
+                </fields>
+                <fields>
+                    <fieldText>Jag förstår!</fieldText>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;Du måste godkänna för att skicka in.&lt;/p&gt;</errorMessage>
+                    </validationRule>
+                    <name>Checkbox1</name>
+                </fields>
+                <fields>
+                    <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255);&quot;&gt;[Sample] &lt;/span&gt;&lt;a href=&quot;https://salesforce.com/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Semester från företaget&lt;/a&gt;&lt;/p&gt;&lt;p&gt;[Sample] Planera dina semestrar i förväg.&lt;/p&gt;</fieldText>
+                    <name>Body2</name>
+                </fields>
+                <fields>
+                    <fieldText>Jag förstår!</fieldText>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;Du måste godkänna för att skicka in.&lt;/p&gt;</errorMessage>
+                    </validationRule>
+                    <name>Checkbox2</name>
+                </fields>
+                <fields>
+                    <fieldText>&lt;p&gt;[Prov] Klicka på Skicka in och vi skickar en e-post till dig och din chef som bekräftar din granskning av denna information.&lt;/p&gt;</fieldText>
+                    <name>Body3</name>
+                </fields>
+                <name>Review_Documents</name>
+            </screens>
+        </flows>
+        <fullName>Review_Documents</fullName>
+        <label>Granska dokument</label>
+    </flowDefinitions>
+    <quickActions>
+        <name>Employee.AssignOnboarding</name>
+        <label>Tilldela onboarding</label>
+    </quickActions>
+</Translations>

@@ -1,0 +1,45 @@
+{
+    "orgName": "HR Service Center Enterprise - Release Test Org",
+    "edition": "Enterprise",
+    "features": [
+        "PlatformEncryption",
+        "Communities",
+        "Knowledge",
+        "ForceComPlatform",
+        "PersonAccounts",
+        "FeatureParameterLicensing",
+        "CustomObjectLicensing",
+        "EmployeeExperience",
+        "ITAgent",
+        "DefaultWorkflowUser",
+        "EmployeeProductivityPlus",
+        "EmployeeServiceAgent"
+    ],
+    "language": "en_US",
+    "settings": {
+        "lightningExperienceSettings": {
+            "enableS1DesktopEnabled": true
+        },
+        "chatterSettings": {
+            "enableChatter": true
+        },
+        "experienceBundleSettings": {
+            "enableExperienceBundleMetadata": true
+        },
+        "communitiesSettings": {
+            "enableNetworksEnabled": true
+        },
+        "languageSettings": {
+            "enableTranslationWorkbench": true,
+            "enablePlatformLanguages": true,
+            "enableEndUserLanguages": true
+        },
+        "mobileSettings": {
+            "enableS1EncryptedStoragePref2": false
+        },
+        "knowledgeSettings": {
+            "enableKnowledge": true,
+            "enableLightningKnowledge": true
+        }
+    }
+}

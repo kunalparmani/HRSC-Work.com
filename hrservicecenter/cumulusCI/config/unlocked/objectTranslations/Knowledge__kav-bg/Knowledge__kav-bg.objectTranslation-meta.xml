@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <name>HR_Benefits</name>
+        <label>Човешки ресурси – социални придобивки</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_Employee_Relations</name>
+        <label>Човешки ресурси – връзки със служителите</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_General</name>
+        <label>Човешки ресурси – общи въпроси</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_Leave</name>
+        <label>Човешки ресурси – отпуски</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_Onboarding</name>
+        <label>Човешки ресурси – интегриране в работния процес</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_Payroll</name>
+        <label>Човешки ресурси – ТРЗ</label>
+    </recordTypes>
+</CustomObjectTranslation>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <nameFieldLabel>Όνομα εργασίας προτύπου</nameFieldLabel>
+    <standardFields>
+        <name>Name</name>
+        <label>Όνομα εργασίας προτύπου</label>
+    </standardFields>
+    <gender>Feminine</gender>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Nominative</caseType>
+        <value>Εργασία προτύπου υποδοχής νέων μελών</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Accusative</caseType>
+        <value>Εργασία προτύπου υποδοχής νέων μελών</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Genitive</caseType>
+        <value>Εργασίας προτύπου υποδοχής νέων μελών</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Nominative</caseType>
+        <value>Εργασίες προτύπου υποδοχής νέων μελών</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Accusative</caseType>
+        <value>Εργασίες προτύπου υποδοχής νέων μελών</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Genitive</caseType>
+        <value>Εργασιών προτύπου υποδοχής νέων μελών</value>
+    </caseValues>
+</CustomObjectTranslation>

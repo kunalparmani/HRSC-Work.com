@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>User didn&apos;t attend training</masterLabel>
+        <translation>Pengguna tidak menghadiri pelatihan</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Complex functionality</masterLabel>
+        <translation>Fungsionalitas yang kompleks</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Existing problem</masterLabel>
+        <translation>Masalah yang ada</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Instructions not clear</masterLabel>
+        <translation>Instruksi tidak jelas</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New problem</masterLabel>
+        <translation>Masalah baru</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

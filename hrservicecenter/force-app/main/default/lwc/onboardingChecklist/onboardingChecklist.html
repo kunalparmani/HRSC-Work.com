@@ -1,0 +1,34 @@
+<!--
+- @author  rkolasinski
+- @date    5/27/21
+- @description LWC responsible for displaying a list of onboarding tasks
+- assigned to a particular employee.
+- @log
+- =============================================================================
+- Date        Developer            Description
+- =============================================================================
+- 5/27/21     rkolasinski          W-000103 - created.
+-->
+
+<template>
+    <!-- Checklist content -->
+    <lightning-card
+        if:true={hasOnboardingAccess}
+        title={labels.FLOW_ONBOARDING_CHECKLIST_HEADER}
+    >
+        <!-- Card content -->
+        <p if:true={hasTasks} class="slds-p-horizontal_small tasks-list">
+            <span class="onboarding-checklist">
+                <template iterator:it={tasks}>
+                    <c-onboarding-checklist-task
+                        key={it.value.taskId}
+                        task={it.value}
+                        onselecttask={handleSelectTask}
+                        is-last={it.last}
+                    >
+                    </c-onboarding-checklist-task>
+                </template>
+            </span>
+        </p>
+    </lightning-card>
+</template>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <nameFieldLabel>Nama Tugas</nameFieldLabel>
+    <standardFields>
+        <name>Name</name>
+        <label>Nama Tugas</label>
+    </standardFields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Tugas Orientasi Karyawan Baru</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Tugas Orientasi Karyawan Baru</value>
+    </caseValues>
+</CustomObjectTranslation>

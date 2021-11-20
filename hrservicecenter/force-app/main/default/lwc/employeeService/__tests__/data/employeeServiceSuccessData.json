@@ -1,0 +1,8 @@
+{
+    "APEX_GET_EMPLOYEE": {
+        "email": "john.doe@example.com",
+        "employeeId": "0031700000pJRRTAA4",
+        "firstName": "John",
+        "lastName": "Doe"
+    }
+}

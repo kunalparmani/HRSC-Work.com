@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Flow Navigation Buttons</masterLabel>
+    <description>Navigation buttons LWC component designed to be used in Screen Flows.</description>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="disableNext" type="Boolean" label="Disable Next" role="inputOnly" required="false" default="false" description="Determines whether or not the Next button should be disabled based on formula variable."/>
+            <property name="labelMarkTaskAsComplete" type="String" label="'Mark task as complete' button label" role="inputOnly" required="false" default="" description="Label of the 'Mark task as complete' button."/>
+            <property name="labelFinish" type="String" label="Finish button label" role="inputOnly" required="false" default="" description="Label of the Finish navigation button."/>
+            <property name="labelNext" type="String" label="Next button label" role="inputOnly" required="false" default="" description="Label of the Next navigation button."/>
+            <property name="labelPause" type="String" label="Pause button label" role="inputOnly" required="false" default="" description="Label of the Pause navigation button."/>
+            <property name="labelPrevious" type="String" label="Previous button label" role="inputOnly" required="false" default="" description="Label of the Previous navigation button."/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

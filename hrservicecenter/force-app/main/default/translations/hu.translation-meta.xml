@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <name>Community_Page_Onboarding_Header</name>
+        <label>Ismerje meg onboarding-csapatát!</label>
+    </customLabels>
+    <customLabels>
+        <name>Flow_Onboarding_Checklist_Header</name>
+        <label>Saját onboarding-ellenőrzőlista</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Mark_Task_As_Completed</name>
+        <label>Feladat megjelölése befejezettként</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Next</name>
+        <label>Tovább</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Previous</name>
+        <label>Előző</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Save</name>
+        <label>Mentés</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Submit</name>
+        <label>Küldés</label>
+    </customLabels>
+    <customLabels>
+        <name>Onboarding_Page_Contact_Name_HR_Contact</name>
+        <label>HR-kapcsolattartó</label>
+    </customLabels>
+    <customLabels>
+        <name>Onboarding_Page_Contact_Name_HR_Manager</name>
+        <label>HR-menedzser</label>
+    </customLabels>
+    <customLabels>
+        <name>Tasks_On_Employee_Related_List_Header</name>
+        <label>Onboarding-feladatok</label>
+    </customLabels>
+    <customLabels>
+        <name>Tasks_On_Employee_Related_List_No_Tasks_Found</name>
+        <label>Nem találhatók onboarding-feladatok</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Hero_Banner_Header</name>
+        <label>Üdv, {{firstName}}!</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_Header_Tasks_Completed</name>
+        <label>Onboarding-feladatok</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_Header_Tasks_Open</name>
+        <label>Felkészítjük a munkára!</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_Open_Tasks</name>
+        <label>Nyitott feladatok</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_See_All_Tasks</name>
+        <label>Az összes feladat megtekintése</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_Subheader_Tasks_Completed</name>
+        <label>Nyakig ül a munkában!</label>
+    </customLabels>
+    <flowDefinitions>
+        <flows>
+            <fullName>Sample_welcome_video</fullName>
+            <label>Üdvözlő videó</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;[Minta] Üdv a csapatban! Ebből a videóból megismerhető a mi történetünk.&amp;nbsp; &lt;/p&gt;</fieldText>
+                    <name>Body</name>
+                </fields>
+                <name>Onboarding_Video_Screen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;b&gt;Minden jónak tűnik!&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;Így kell kipipálni a teendőket! Csak így tovább!&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+                    <name>Complete_Display_Text</name>
+                </fields>
+                <name>Thank_You_Screen</name>
+            </screens>
+        </flows>
+        <fullName>Sample_welcome_video</fullName>
+        <label>Üdvözlő videó</label>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Sample_ergonomic_assessment</fullName>
+            <label>[Minta] Ergonómiai felmérés</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;[Minta]&lt;span style=&quot;background-color: transparent; color: rgb(0, 0, 0); font-family: Arial; font-size: 11pt;&quot;&gt; &lt;/span&gt;Létrejött az Ön számára a(z) &lt;a href=&quot;/sample/s/case/{!CreateCase}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!GetCaseRecord.CaseNumber} számú eset&lt;/a&gt;. Fel fogja venni Önnel a kapcsolatot egy HR-specialista. Az aktuális állapot ellenőrzéséhez nyissa meg a &lt;a href=&quot;/sample/s/case/Case/Default&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Saját esetek&lt;/a&gt; lapot.&lt;/p&gt;</fieldText>
+                    <name>Confirmation_Message</name>
+                </fields>
+                <name>Confirmation_Screen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;[Minta] Az otthoni irodában is fontos az ergonómia. Szakértői csapatunk segít felmérni a jelenlegi helyzetét, és berendezéseket javasol az otthoni irodához.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;A folytatáshoz kattintson a „Tovább” gombra.&lt;/p&gt;</fieldText>
+                    <name>General_Information</name>
+                </fields>
+                <name>General_Info</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;Töltsön fel egy fényképet a munkavégzési területéről, majd kattintson a Küldés gombra. A fényképen ne legyen látható érzékeny vagy személyes információ.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Létrehozunk egy esetet az Ön számára, és fel fogja venni Önnel a kapcsolatot egy HR-specialista.&lt;/p&gt;</fieldText>
+                    <name>General_Information2</name>
+                </fields>
+                <name>Upload_Files</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(247, 3, 3);&quot;&gt;A folytatáshoz legalább egy fájlt csatolnia kell. &lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>Error_Message</name>
+                </fields>
+                <name>Validation</name>
+            </screens>
+        </flows>
+        <fullName>Sample_ergonomic_assessment</fullName>
+        <label>[Minta] Ergonómiai felmérés</label>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>AssignOnboardingTasks</fullName>
+            <label>Onboarding-feladatok kiosztása</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;color: rgb(0, 0, 0); background-color: transparent; font-size: 16px;&quot;&gt;Az onboarding-feladatok kiosztása sikeresen megtörtént!&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: transparent; font-size: 14px;&quot;&gt;Az onboarding-feladatok állapotának megtekintéséhez nyissa meg az alkalmazott rekordját.&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>Complete_Display_Text_0_0</name>
+                </fields>
+                <name>Confirmation_Screen_0</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;A HR-szolgáltatóközpont támogatja a tömeges onboardingot szolgáló sablonokat. Az onboarding-folyamat megkezdéséhez válassza ki a sablonokat, majd kattintson a Kiosztás lehetőségre.&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>AssignObBoardingTexBody</name>
+                </fields>
+                <fields>
+                    <fieldText>Válasszon onboarding-sablonokat.</fieldText>
+                    <name>Select_onboarding_templates</name>
+                </fields>
+                <name>Multi_select_Onboarding_Templates</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;Nem található aktív onboarding-sablon!&lt;/p&gt;</fieldText>
+                    <name>NoActiveOnBoardingTemplatetext</name>
+                </fields>
+                <name>Thank_You_Screen</name>
+            </screens>
+        </flows>
+        <fullName>AssignOnboardingTasks</fullName>
+        <label>Onboarding-feladatok kiosztása</label>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Review_Documents</fullName>
+            <label>Dokumentumok áttekintése</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;[Minta] Küldtünk egy e-mailt Önnek és a felettesének.&lt;/p&gt;</fieldText>
+                    <name>Confirmation_Page_Content</name>
+                </fields>
+                <name>ConfirmationPage</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;Rólunk&lt;/p&gt;</fieldText>
+                    <name>HeaderTop</name>
+                </fields>
+                <fields>
+                    <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);&quot;&gt;[Minta] &lt;/span&gt;&lt;a href=&quot;https://salesforce.com/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Cégtörténet&lt;/a&gt;&lt;/p&gt;&lt;p&gt;[Minta] Szánjon egy kis időt arra, hogy megismerkedik cégünk történetével.&lt;/p&gt;</fieldText>
+                    <name>Body1</name>
+                </fields>
+                <fields>
+                    <fieldText>Megvan!</fieldText>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;Az elküldéshez el kell fogadnia a leírtakat.&lt;/p&gt;</errorMessage>
+                    </validationRule>
+                    <name>Checkbox1</name>
+                </fields>
+                <fields>
+                    <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255);&quot;&gt;[Minta] &lt;/span&gt;&lt;a href=&quot;https://salesforce.com/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Céges ünnepnapok&lt;/a&gt;&lt;/p&gt;&lt;p&gt;[Minta] Tervezze meg a vakációt jó előre.&lt;/p&gt;</fieldText>
+                    <name>Body2</name>
+                </fields>
+                <fields>
+                    <fieldText>Megvan!</fieldText>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;Az elküldéshez el kell fogadnia a leírtakat.&lt;/p&gt;</errorMessage>
+                    </validationRule>
+                    <name>Checkbox2</name>
+                </fields>
+                <fields>
+                    <fieldText>&lt;p&gt;[Minta] Kattintson a Küldés lehetőségre, és elküldünk egy e-mailt Önnek és a felettesének, mely megerősíti, hogy Ön áttekintette ezeket az információkat.&lt;/p&gt;</fieldText>
+                    <name>Body3</name>
+                </fields>
+                <name>Review_Documents</name>
+            </screens>
+        </flows>
+        <fullName>Review_Documents</fullName>
+        <label>Dokumentumok áttekintése</label>
+    </flowDefinitions>
+    <quickActions>
+        <name>Employee.AssignOnboarding</name>
+        <label>Onboarding kiosztása</label>
+    </quickActions>
+</Translations>

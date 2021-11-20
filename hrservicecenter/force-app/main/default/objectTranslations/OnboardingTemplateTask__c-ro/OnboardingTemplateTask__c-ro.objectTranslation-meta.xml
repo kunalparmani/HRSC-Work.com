@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <nameFieldLabel>Nume sarcină șablon</nameFieldLabel>
+    <standardFields>
+        <name>Name</name>
+        <label>Nume sarcină șablon</label>
+    </standardFields>
+    <gender>Neuter</gender>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Nominative</caseType>
+        <article>None</article>
+        <value>Sarcină șablon de inițiere</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Nominative</caseType>
+        <article>Definite</article>
+        <value>Sarcina șablon de inițiere</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Nominative</caseType>
+        <article>None</article>
+        <value>Sarcini șablon de inițiere</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Nominative</caseType>
+        <article>Definite</article>
+        <value>Sarcinile șablon de inițiere</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Dative</caseType>
+        <article>Definite</article>
+        <value>Sarcinii șablon de inițiere</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Dative</caseType>
+        <article>None</article>
+        <value>Sarcinii șablon de inițiere</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Dative</caseType>
+        <article>Definite</article>
+        <value>Sarcinilor șablon de inițiere</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Dative</caseType>
+        <article>None</article>
+        <value>Sarcinilor șablon de inițiere</value>
+    </caseValues>
+</CustomObjectTranslation>

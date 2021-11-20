@@ -1,0 +1,61 @@
+.licensing-error-container {
+    text-align: center;
+}
+
+.welcome-task-card {
+    color: var(--lwc-colorTextDefault);
+}
+
+.welcome-task-card .welcome-task-header {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.welcome-task-card .welcome-task-subheader {
+    line-height: 0.85rem;
+}
+
+.welcome-task-card .welcome-task-subheader,
+.welcome-task-card
+    .welcome-task-body
+    .container-open-tasks
+    .open-tasks-description,
+.welcome-task-card .welcome-task-footer a {
+    font-size: 0.8125rem;
+    font-weight: 400;
+}
+
+.welcome-task-card .welcome-task-body .container-open-tasks {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome-task-card .welcome-task-body .container-open-tasks .open-tasks {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.welcome-task-card
+    .welcome-task-body
+    .container-open-tasks
+    .open-tasks-description,
+.welcome-task-card .welcome-task-footer {
+    text-align: center;
+}
+
+.welcome-task-card .welcome-task-body {
+    margin-top: 0;
+}
+
+.welcome-task-card .welcome-task-footer {
+    border-top-color: var(--lwc-colorBorderSeparatorAlt, #d4d4d4);
+    margin-top: 0;
+}
+
+.welcome-task-card .welcome-task-footer a {
+    color: var(--lwc-brandTextLink);
+}

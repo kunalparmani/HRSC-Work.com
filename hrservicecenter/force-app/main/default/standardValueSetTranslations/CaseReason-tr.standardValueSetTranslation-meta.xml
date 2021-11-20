@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>User didn&apos;t attend training</masterLabel>
+        <translation>Kullanıcı eğitime katılmadı</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Complex functionality</masterLabel>
+        <translation>Karmaşık işlevsellik</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Existing problem</masterLabel>
+        <translation>Mevcut sorun</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Instructions not clear</masterLabel>
+        <translation>Talimatlar net değil</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New problem</masterLabel>
+        <translation>Yeni sorun</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

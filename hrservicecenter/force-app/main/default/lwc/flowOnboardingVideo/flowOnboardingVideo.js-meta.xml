@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Flow Video</masterLabel>
+    <description>Native HTML video LWC component designed to be used in Screen Flows.
+        Requires either static resource file name or external URL in order to render the content.
+    </description>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="mediaURL" type="String" label="Media URL" role="inputOnly" required="false" default="" description="External URL media content will be loaded from.
+                Renders in an iframe tag. Requires embedded video link to prevent CORS issues."/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

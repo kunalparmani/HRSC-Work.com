@@ -1,0 +1,39 @@
+<!--
+- @author  rkolasinski
+- @date    5/27/21
+- @description LWC responsible for displaying a single card with onboarding
+- task data.
+- @log
+- =============================================================================
+- Date        Developer            Description
+- =============================================================================
+- 5/27/21     rkolasinski          W-000103 - created.
+-->
+
+<template>
+    <article tabindex="0" class={taskCardCss}>
+        <div class="slds-media__body slds-p-around_medium task-card-body">
+            <div class={taskBodyLabelCss}>
+                <span class="icon slds-m-right_small">
+                    <lightning-icon
+                        if:true={task.completed}
+                        icon-name="utility:success"
+                        alternative-text="Complete"
+                        size="small"
+                        variant="success"
+                    ></lightning-icon>
+                </span>
+                <span class="label">
+                    <a
+                        tabindex="0"
+                        aria-label={task.flowAPIName}
+                        onclick={handleTaskClick}
+                    >
+                        {task.label}
+                    </a>
+                </span>
+            </div>
+            <div class="task-card-body-description">{task.description}</div>
+        </div>
+    </article>
+</template>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <name>wkdw__TicketCategory__c</name>
+    <label>Categorie de tichet</label>
+    <picklistValues>
+        <masterLabel>IT</masterLabel>
+        <translation>IT</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HR - Employee Relations</masterLabel>
+        <translation>HR – Relații cu angajații</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HR - General</masterLabel>
+        <translation>HR – General</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HR - Payroll</masterLabel>
+        <translation>HR – Salarizare</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HR - Benefits</masterLabel>
+        <translation>HR – Beneficii</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HR - Leave</masterLabel>
+        <translation>HR – Concedii</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HR - Onboarding</masterLabel>
+        <translation>HR – Inițiere</translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <name>HR_Benefits</name>
+        <label>Ljudski potencijali – Pogodnosti</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_Employee_Relations</name>
+        <label>Ljudski potencijali – Odnosi zaposlenika</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_General</name>
+        <label>Ljudski potencijali – Općenito</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_Leave</name>
+        <label>Ljudski potencijali – Dopusti</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_Onboarding</name>
+        <label>Ljudski potencijali – Uključivanje zaposlenika</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_Payroll</name>
+        <label>Ljudski potencijali – Obračun plaća</label>
+    </recordTypes>
+</CustomObjectTranslation>

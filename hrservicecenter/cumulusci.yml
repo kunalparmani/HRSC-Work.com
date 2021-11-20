@@ -1,0 +1,703 @@
+minimum_cumulusci_version: 3.31.0
+project:
+    name: hrservicecenter
+    package:
+        name: HR Service Center
+        namespace: wkdw
+        api_version: 50.0
+    source_format: sfdx
+    git:
+        default_branch: main
+        repo_url: https://github.com/CovidBackToWork/hrservicecenter
+
+sources:
+    digitalworkspace:
+        github: https://github.com/CovidBackToWork/digitalworkspace
+        branch: main
+    concierge:
+        github: https://github.com/CovidBackToWork/concierge
+        branch: main
+    shared-robot-library:
+        github: https://github.com/CovidBackToWork/shared-robot-library
+        branch: dev-int
+
+orgs:
+    scratch:
+        release:
+            config_file: orgs/release.json
+            days: 30
+            namespaced: true
+        integration:
+            config_file: orgs/integration.json
+            days: 30
+        qa:
+            config_file: orgs/qa.json
+            days: 30
+            namespaced: false
+        dev:
+            config_file: orgs/dev.json
+            days: 30
+            namespaced: true
+
+tasks:
+    install_last_ew_package:
+        # Find the last version of the Employee Workspace devint package and install it
+        class_path: cumulusCI.tasks.unpackaged.InstallLastEwPackage
+        group: hd
+        options:
+            target_package: Employee Workspace devint
+            command: force:package:install
+
+    install_last_ec_package:
+        # Find the last version of the Concierge devint package and install it
+        class_path: cumulusCI.tasks.unpackaged.InstallLastEcPackage
+        group: hd
+        options:
+            target_package: Employee Concierge devint
+            command: force:package:install
+
+    # Install latest managed package. HRSC package 1.0.0 as of 07/07/2021
+    install_managed:
+        # Install the HRSC Managed Package
+        group: hrsc-prod
+        name: Install the HR Service Center managed package.
+        options:
+            version: "04t4R000001dapuQAA"
+
+    # Install latest managed package. HR Service Center Metadata package 1.0.0 as of 07/07/2021
+    install_unlocked_metadata:
+        # Install the HRSC Managed Package
+        group: hrsc-prod
+        name: Install HR Service Center metadata.
+        class_path: cumulusci.tasks.salesforce.InstallPackageVersion
+        options:
+            version: "04t4R000001dapzQAA"
+
+    create_cases_data:
+        # Create some Cases Data to be used for dev testing
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        group: hd
+        options:
+            path: scripts/apex/createCases.apex
+
+    generate_and_load_test_data:
+        # Generates data using Snowfakery recipe and loads into org
+        class_path: cumulusci.tasks.bulkdata.generate_and_load_data_from_yaml.GenerateAndLoadDataFromYaml
+        group: Test Data
+        options:
+            generator_yaml: testdata/employee-workspace.recipe.yml
+            mapping: testdata/employee-workspace.mapping.yml
+            num_records: 1
+            num_records_tablename: Address
+
+    generate_and_load_perf_employee_data:
+        # Generates employee data using Snowfakery recipe and loads into org
+        class_path: cumulusci.tasks.bulkdata.generate_and_load_data_from_yaml.GenerateAndLoadDataFromYaml
+        group: Test Data
+        options:
+            generator_yaml: testdata/concierge.perf.employee.recipe.yml
+            mapping: testdata/concierge.perf.mapping.yml
+            num_records: 1
+            num_records_tablename: Address
+
+    generate_and_load_perf_case_data:
+        # Generates case data using Snowfakery recipe and loads into org
+        class_path: cumulusci.tasks.bulkdata.generate_and_load_data_from_yaml.GenerateAndLoadDataFromYaml
+        group: Test Data
+        options:
+            generator_yaml: testdata/concierge.perf.case.recipe.yml
+            num_records: 1
+            num_records_tablename: Case
+
+    generate_and_load_perf_knowledge_data:
+        # Generates knowledge data using Snowfakery recipe and loads into org
+        class_path: cumulusci.tasks.bulkdata.generate_and_load_data_from_yaml.GenerateAndLoadDataFromYaml
+        group: Test Data
+        options:
+            generator_yaml: testdata/concierge.perf.knowledge.recipe.yml
+            num_records: 1
+            num_records_tablename: Knowledge__kav
+
+    generate_and_load_perf_user_data:
+        # Generates data using Snowfakery recipe and loads into org - user related data
+        class_path: cumulusci.tasks.bulkdata.generate_and_load_data_from_yaml.GenerateAndLoadDataFromYaml
+        group: Test Data
+        options:
+            generator_yaml: testdata/concierge.perf.user.recipe.yml
+            bulk_mode: Serial
+            num_records: 1
+            num_records_tablename: PermissionSetLicenseAssign
+
+    open_concierge_gate:
+        # Opens the ConciergeFeaturesAccess gate for local development
+        group: dev-only
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        options:
+            command: force:apex:execute -f cumulusCI/scripts/Open_ConciergeFeaturesAccess.apex
+
+    validate_ew_setup:
+        # Validate Employee Workspace setup configuration
+        name: Validate Employee Workspace setup configuration
+        class_path: cumulusCI.tasks.apex_exception_parser.ApexExceptionParser
+        group: hrsc-prod
+        options:
+            exception_name: "EW_COMMUNITY_NOT_CONFIGURED"
+            path: cumulusCI/scripts/Validate_EW_Setup.apex
+
+    validate_workdotcom_psls:
+        # Validate required workdotcom specific psls
+        name: Validate required workdotcom specific psls
+        class_path: cumulusCI.tasks.validate_workdotcom_psls.ValidatePSLs
+        group: concierge-prod
+
+    validate_psls:
+        # Validate required PSLs
+        name: Validate required PSLs
+        class_path: cumulusCI.tasks.validate_psls.ValidatePSLs
+        group: concierge-prod
+        options:
+            permission_set_licenses:
+                - CompanyCommunityPsl
+                - Employee360_EmployeeProductivityPlusPsl
+                - Employee360_EmployeeServiceAgentPsl
+
+    validate_user_licenses:
+        # Validate required user licenses
+        name: Validate required user licenses
+        class_path: cumulusCI.tasks.validate_user_licenses.ValidateUserLicenses
+        group: concierge-prod
+        options:
+            user_licenses:
+
+    validate_system_permissions:
+        # Validate required system permissions
+        name: Validate required system permissions
+        class_path: cumulusCI.tasks.validate_system_permissions.ValidateSystemPermissions
+        group: concierge-prod
+
+    validate_knowledge_addon:
+        # Validate Knowledge Addon
+        name: Validate Knowledge Addon
+        class_path: cumulusCI.tasks.validate_knowledge_addon.ValidateKnowledgeAddon
+        group: concierge-prod
+
+    enable_admin_knowledge_user:
+        # Enable Knowledge Access
+        name: Enable Knowledge Access
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        group: concierge-prod
+        options:
+            path: cumulusCI/scripts/Enable_Admin_Knowledge_User.apex
+
+    configure_org_settings:
+        # Enable Knowledge Authoring
+        name: Enable Knowledge Authoring
+        group: concierge-prod
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: cumulusCI/config/prod/settings
+
+    deploy_objects:
+        # Set org-wide defaults for the Account, Contract, Contact, and Case objects. Add custom fields and record types to the Knowledge object.
+        name: Set org-wide defaults for the Account, Contract, Contact, and Case objects. Add custom fields and record types to the Knowledge object.
+        group: concierge-prod
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: cumulusCI/config/prod/objects
+
+    assign_psl_permsets_to_admin:
+        # Assign the Service User permission set license and the Employee Concierge User Data Access
+        name: Assign the Service User permission set license and the HR Service Center User Data Access
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        group: concierge-prod
+        options:
+            path: cumulusCI/scripts/Assign_PSL_Permsets_To_Admin.apex
+
+    create_my_tickets_nav_item:
+        # Add My Tickets to the Employee Workspace Site Navigation
+        name: Add My Tickets to the Employee Workspace Site Navigation
+        group: concierge-prod
+        class_path: cumulusCI.tasks.create_my_tickets_nav_item.CreateMyTicketsNavItem
+
+    create_public_group:
+        # Create a Public Group for HRSC
+        name: Create a Public Group for HR Service Center
+        group: hrsc-prod
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: cumulusCI/config/prod/groups
+
+    setup_flows:
+        # Create flows for HRSC
+        name: Create OOTB flows for HR Service Center
+        group: hrsc-prod
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: cumulusCI/config/prod/flows
+
+    setup_roles:
+        # Create user roles for HRSC
+        name: Create user roles for HR Service Center
+        group: hrsc-prod
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: cumulusCI/config/prod/roles
+
+    setup_queues:
+        # Create queues  for HRSC
+        name: Create queues for HR Service Center
+        group: hrsc-prod
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: cumulusCI/config/prod/queues
+
+    setup_customMetaData:
+        # Create Custom Metadata for HRSC
+        name: Create custom metadata for HR Service Center
+        group: hrsc-prod
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: cumulusCI/config/prod/customMetadata
+
+    setup_quickActions:
+        # Create quickActions for HRSC
+        name: Create quick actions for HR Service Center
+        group: hrsc-prod
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: cumulusCI/config/prod/quickActions
+
+    create_hr_agent_app:
+        # Create the HR Agent Lightning App
+        name: Create the HR Agent Desk Lightning App
+        group: hrsc-prod
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: cumulusCI/config/prod/applications
+
+    assign_agent_desk_to_profiles:
+        # Assign the Agent Desk app to the IT Agent and System Administrator profiles
+        name: Assign the Agent Desk app to the IT Agent and System Administrator profiles
+        group: concierge-prod
+        class_path: cumulusCI.tasks.assign_agent_desk_to_profile.AssignAgentDeskToProfile
+        options:
+            namespace_inject: $project_config.project__package__namespace
+            api_names:
+                - IT Agent
+                - Admin
+
+    assign_agent_desk_to_permsets:
+        # Assign the Agent Desk app to the Knowledge Manager permission set
+        name: Assign the Agent Desk app to the Knowledge Manager permission set
+        group: concierge-prod
+        class_path: cumulusCI.tasks.assign_agent_desk_to_permset.AssignAgentDeskToPermset
+        options:
+            namespace_inject: $project_config.project__package__namespace
+            api_names:
+                - Knowledge_Manager
+
+    create_case_layouts:
+        # Create the IT Case Page Layout and Compact Layout
+        name: Create the IT Case Page Layout and Compact Layout
+        group: concierge-prod
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: cumulusCI/config/prod/layouts
+
+    create_update_actions:
+        # Create Quick Actions for IT Cases and Assets. Create the IT Case Path.
+        name: Create Quick Actions for IT Cases and Assets. Create the IT Case Path.
+        group: concierge-prod
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: cumulusCI/config/prod/updateActions
+
+    deploy_unlocked_hrsc_permissionsets:
+        # Deploys unlocked permissionsets as source
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        group: hd
+        options:
+            command: force:source:deploy -p cumulusCI/config/unlocked/permissionsets
+    deploy_unlocked_hrsc_queues:
+        # Deploys unlocked queues as source
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        group: hd
+        options:
+            command: force:source:deploy -p cumulusCI/config/unlocked/queues
+    deploy_unlocked_hrsc_applications:
+        # Deploys unlocked applications as source
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        group: hd
+        options:
+            command: force:source:deploy -p cumulusCI/config/unlocked/applications
+    deploy_unlocked_hrsc_groups:
+        # Deploys unlocked groups as source
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        group: hd
+        options:
+            command: force:source:deploy -p cumulusCI/config/unlocked/groups
+    deploy_unlocked_hrsc_roles:
+        # Deploys unlocked roles as source
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        group: hd
+        options:
+            command: force:source:deploy -p cumulusCI/config/unlocked/roles
+    deploy_unpackaged_hrsc_objects:
+        # Deploys objects metadata
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        group: hd
+        options:
+            command: force:source:deploy -p cumulusCI/config/prod/objects
+    setup_unpackaged_hrsc_objects:
+        # Deploys objects metadata
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        name: Create custom fields in the case object.
+        group: hrsc-prod
+        options:
+            command: force:source:deploy --sourcepath=cumulusCI/config/prod/objects -l RunSpecifiedTests -r "skip-tests"
+    deploy_unlocked_hrsc_objects:
+        # Deploys unlocked objects as source
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        group: hd
+        options:
+            command: force:source:deploy -p cumulusCI/config/unlocked/objects
+    deploy_unlocked_permission_sets:
+        # Create the HRSC User Data Access, Employee Knowledge User, and the Knowledge Manager permission sets
+        name: Create the HR Service Center User Data Access, Employee Knowledge User, and the Knowledge Manager permission sets
+        group: hrsc-prod
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: cumulusCI/config/unlocked/permissionsets
+    deploy_unlicensed_hrsc_objects:
+        # Since licensing is not supported in source push, deploy the unlicensed version of the objects
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        group: hd
+        options:
+            command: force:source:deploy -p unlicensed/objects
+    deploy_unlicensed_hrsc_customperm:
+        # Since licensing is not supported in source push, deploy the unlicensed version of the custom perm
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        group: hd
+        options:
+            command: force:source:deploy -p unlicensed/customPermissions
+    deploy_unpackaged_assignment_rules:
+        # Deploys case assignment rules
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        group: hd
+        options:
+            command: force:source:deploy -p cumulusCI/config/prod/assignmentRules
+    setup_unpackaged_assignment_rules:
+        # Deploys case assignment rules
+        class_path: cumulusci.tasks.salesforce.Deploy
+        name: Create case assignment rules.
+        group: hrsc-prod
+        options:
+            path: cumulusCI/config/prod/assignmentRules
+
+    robot:
+        options:
+            options:
+                outputdir: ./robot/results
+            sources:
+                - shared-robot-library
+                - digitalworkspace
+
+flows:
+    dev_org:
+        steps:
+            2:
+                flow: push_source
+
+    dependencies:
+        # Install the managed package
+        steps:
+            3:
+                task: install_last_ew_package
+            4:
+                task: install_last_ec_package
+            5:
+                flow: push_unpackaged
+            6:
+                flow: config_admin_permsets
+            7:
+                task: concierge:dev_deploy_public_groups
+            8:
+                task: concierge:dev_deploy_queues
+
+    push_source:
+        steps:
+            2:
+                #Push force-app sources to the scratch org
+                task: dx_push
+            3:
+                task: deploy_unlocked_hrsc_groups
+            4:
+                task: deploy_unlocked_hrsc_roles
+            5:
+                task: deploy_unlocked_hrsc_queues
+            6:
+                task: deploy_unpackaged_hrsc_objects
+            7:
+                task: deploy_unlocked_hrsc_objects
+            8:
+                task: deploy_unlocked_hrsc_applications
+            9:
+                task: deploy_unpackaged_assignment_rules
+            10:
+                task: deploy_unlocked_permission_sets
+            11:
+                task: deploy_unlicensed_hrsc_objects
+            12:
+                task: deploy_unlicensed_hrsc_customperm
+
+    post_config:
+        # Config scratch org after concierge and employee source have been pushed
+        steps:
+            3:
+                flow: create_test_users
+            4:
+                task: digitalworkspace:create_employee_workspace_community
+            5:
+                task: digitalworkspace:customize_employee_workspace_community
+                options:
+                    permset_name: workplace_user
+            6:
+                task: deploy_unpackaged_post_install
+            7:
+                task: digitalworkspace:publish_employee_workspace_community
+            8:
+                task: generate_and_load_test_data
+            9:
+                flow: config_employee_users_links
+            10:
+                flow: load_data
+            11:
+                task: open_concierge_gate
+
+    config_dev:
+        steps:
+            2:
+                task: None
+            5:
+                flow: create_test_users
+            6:
+                task: digitalworkspace:create_employee_workspace_community
+            7:
+                task: digitalworkspace:customize_employee_workspace_community
+                options:
+                    permset_name: workplace_user
+            8:
+                task: concierge:deploy_unpackaged_post_install
+            9:
+                task: digitalworkspace:publish_employee_workspace_community
+            # TODO: Uncomment after this is fixed. It shows an error:
+            # sObject EmployeeWorkExperience__c does not exist or is not visible to the current user
+            # One or more schema or permissions errors blocked the operation.
+            # 10:
+            #     task: generate_and_load_test_data
+            # 11:
+            #     flow: config_employee_users_links
+            # TODO: concierge load data uses internal classes which we can't use.
+            # We should load data ourself using copy of scripts in helpdesk-bot/dx-utils/apex-scripts/
+            # 12:
+            #     flow: load_data
+            13:
+                task: concierge:open_concierge_gate
+
+    push_unpackaged:
+        steps:
+            0:
+                task: digitalworkspace:DEV_deploy_unpackaged_pre_install
+            1:
+                task: concierge:deploy_unpackaged_helpdesk
+
+    load_data:
+        # Create some data for helpdesk
+        steps:
+            1:
+                task: concierge:create_cases_data
+            2:
+                task: concierge:create_article_data
+            3:
+                task: concierge:publish_article_data
+
+    config_employee_users_links:
+        # Relate supplemental employee to user
+        steps:
+            0:
+                flow: digitalworkspace:config_employee_users_links
+            1:
+                task: digitalworkspace:link_employee_to_user
+                options:
+                    param1: test_std
+                    param2: STD_005
+
+    config_admin_permsets:
+        # Configure the admin user permissions
+        steps:
+            1:
+                task: dx
+                options:
+                    command: force:data:record:update -s User -w "Name='User User'" -v "UserPermissionsKnowledgeUser=true"
+            2:
+                task: concierge:deploy_permission_sets
+
+            3.1:
+                task: concierge:assign_permission_set_licenses
+                options:
+                    api_names: EmployeeExperiencePsl
+                    user_alias: UUser
+            3.2:
+                # Assigns admin permission sets
+                task: concierge:assign_permission_sets
+                options:
+                    api_names: workplace,workplace_user,skip_identity_confirmation
+                    user_alias: UUser # Admin default alias
+            4:
+                task: digitalworkspace:assign_sys_admin_employee_number
+            5:
+                task: assign_psl_permsets_to_admin
+
+    create_test_users:
+        # Creates test users for the scratch org
+        steps:
+            0:
+                flow: digitalworkspace:create_test_user_and_assign_permissions
+            1:
+                task: dx
+                # create "test_std" user
+                options:
+                    command: "force:user:create -a test_std --definitionfile config/test-std-user-def.json"
+            2.1:
+                task: concierge:assign_permission_set_licenses
+                options:
+                    api_names: EmployeeExperiencePsl,Employee360_EmployeeConciergePsl
+                    user_alias: test_std
+            2.2:
+                # Assigns EW employee permission sets
+                task: concierge:assign_permission_sets
+                options:
+                    api_names: workplace_user,workspace_user_data_access,skip_identity_confirmation
+                    user_alias: test_std
+            2.3:
+                # Assigns EC permission set group
+                task: concierge:assign_permission_set_groups
+                options:
+                    api_names: EmployeeConciergeAccessGroup
+                    user_alias: test_std
+            3:
+                task: digitalworkspace:override_user_password
+                options:
+                    param1: test_std
+                    param2: test1234
+
+    config_qa:
+        steps:
+            3:
+                task: push_unpackaged
+            4:
+                flow: concierge:config_admin_permsets
+            5:
+                flow: concierge:create_test_users
+            6:
+                task: create_employee_workspace_community
+            7:
+                task: publish_employee_workspace_community
+            8:
+                task: generate_and_load_test_data
+            9:
+                flow: config_employee_users_links
+
+    config_managed:
+        steps:
+            3:
+                task: push_unpackaged
+            4:
+                task: deploy_test_permsets_to_managed_package
+            5:
+                flow: config_admin_permsets
+            6:
+                flow: create_test_users
+            7:
+                task: create_employee_workspace_community
+            8:
+                task: publish_employee_workspace_community
+            9:
+                task: generate_and_load_test_data
+
+    functional_testing:
+        # Configures an environment dedicated to functional tests
+        steps:
+            1.1:
+                task: dx_push
+
+    robot_testing:
+        # Assigns the required permsets to the Employee Workspace Sys Admin user
+        steps:
+            1:
+                task: dx_push
+
+    metadeploy_validations:
+        steps:
+            1:
+                task: validate_workdotcom_psls
+            2:
+                task: validate_psls
+            3:
+                task: validate_user_licenses
+            4:
+                task: validate_system_permissions
+            5:
+                task: validate_knowledge_addon
+
+    pre_install_setup:
+        # Configure org before installing Employee Concierge
+        steps:
+            1:
+                task: configure_org_settings
+
+    config_prod:
+        # Configure Concierge in Production with required permission sets and other configurations
+        steps:
+            1:
+                task: setup_unpackaged_hrsc_objects
+            2:
+                task: setup_unpackaged_assignment_rules
+
+    install_and_configure:
+        steps:
+            1:
+                task: install_managed
+                ui_options:
+                    name: Install the HR Service Center managed package.
+            2:
+                task: install_unlocked_metadata
+                ui_options:
+                    name: Install the HR Service Center Metadata
+            3:
+                flow: config_prod
+
+plans:
+    install_and_configure:
+        slug: install_and_config
+        title: Install and Configure HR Service Center
+        tier: primary
+        checks:
+            - when: "'.my.' not in org_config.instance_url"
+              action: error
+              message: "Enable My Domain in your org."
+            - when: "not tasks.validate_workdotcom_psls()"
+              action: error
+              message: "You need the Employee Experience license to install this package. Talk to your account executive for details."
+            - when: "not tasks.validate_psls()"
+              action: error
+              message: "You need a Company Community license, Employee Productivity Plus license, and Employee Service Agent license to install HR Service Center. Talk to your account executive for details."
+            - when: "not tasks.validate_system_permissions()"
+              action: error
+              message: "Person accounts must be enabled in your org before installing  HR Service Center. Talk to your account executive for details."
+            - when: "not tasks.validate_knowledge_addon()"
+              action: error
+              message: "You need the Knowledge User license to install HR Service Center. Talk to your account executive for details."
+        steps:
+            1:
+                flow: install_and_configure

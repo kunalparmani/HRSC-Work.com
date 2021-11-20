@@ -1,0 +1,17 @@
+{
+    "FirstName": "Ami",
+    "LastName": "Bidule",
+    "Alias": "test_std",
+    "Email": "standard@dw.com.test",
+    "TimeZoneSidKey": "America/Denver",
+    "LocaleSidKey": "en_US",
+    "EmailEncodingKey": "UTF-8",
+    "LanguageLocaleKey": "en_US",
+    "profileName": "Standard User",
+    "permsets": [
+        "Employee_Concierge_User_Data_Access",
+        "Employee_Knowledge_User"
+    ],
+    "generatePassword": true,
+    "employeeNumber": "STD_005"
+}

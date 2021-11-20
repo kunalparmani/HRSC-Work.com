@@ -1,0 +1,75 @@
+<!--
+- @author  rkolasinski
+- @date    4/6/21
+- @description Navigation buttons component designed to use in Screen Flows.
+ * Uses default Flow events available in lightning-flow-support bundle.
+- @log
+- =============================================================================
+- Date        Developer            Description
+- =============================================================================
+- 4/6/21      rkolasinski          US-5 - created.
+-->
+
+<template>
+    <footer
+        class="navigation-buttons-wrapper slds-card__footer slds-grid slds-grid_align-spread slds-p-horizontal_small"
+    >
+        <div class="actionsLeft">
+            <template if:true={labelPause}>
+                <button
+                    class="slds-button slds-button_neutral button-pause"
+                    type="button"
+                    title={labelPause}
+                    onclick={handlePause}
+                >
+                    {labelPause}
+                </button>
+            </template>
+        </div>
+        <div class="actionsRight">
+            <template if:true={labelPrevious}>
+                <button
+                    class="slds-button slds-button_neutral button-previous"
+                    type="button"
+                    title={labelPrevious}
+                    onclick={handlePrevious}
+                >
+                    {labelPrevious}
+                </button>
+            </template>
+            <template if:true={showNextButton}>
+                <button
+                    data-id="buttonNext"
+                    class="slds-button slds-button_brand button-next"
+                    type="button"
+                    title={labelNext}
+                    onclick={handleNext}
+                >
+                    {labelNext}
+                </button>
+            </template>
+            <template if:true={showFinishButton}>
+                <button
+                    data-id="buttonNext"
+                    class="slds-button slds-button_brand button-finish"
+                    type="button"
+                    title={labelFinish}
+                    onclick={handleFinish}
+                >
+                    {labelFinish}
+                </button>
+            </template>
+            <template if:true={showMarkTaskAsCompleteButton}>
+                <button
+                    data-id="buttonMarkTaskAsComplete"
+                    class="slds-button slds-button_brand button-mark-task-as-complete"
+                    type="button"
+                    title={labelMarkTaskAsComplete}
+                    onclick={handleMarkTaskAsComplete}
+                >
+                    {labelMarkTaskAsComplete}
+                </button>
+            </template>
+        </div>
+    </footer>
+</template>

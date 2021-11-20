@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <nameFieldLabel>Název úkolu šablony</nameFieldLabel>
+    <standardFields>
+        <name>Name</name>
+        <label>Název úkolu šablony</label>
+    </standardFields>
+    <gender>Masculine</gender>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Nominative</caseType>
+        <value>Úkol šablony zaučení</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Nominative</caseType>
+        <value>Úkoly šablony zaučení</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Accusative</caseType>
+        <value>Úkol šablony zaučení</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Accusative</caseType>
+        <value>Úkoly šablony zaučení</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Genitive</caseType>
+        <value>Úkolu šablony zaučení</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Genitive</caseType>
+        <value>Úkolů šablony zaučení</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Dative</caseType>
+        <value>Úkolu šablony zaučení</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Dative</caseType>
+        <value>Úkolům šablony zaučení</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Instrumental</caseType>
+        <value>Úkolem šablony zaučení</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Instrumental</caseType>
+        <value>Úkoly šablony zaučení</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Locative</caseType>
+        <value>Úkolu šablony zaučení</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Locative</caseType>
+        <value>Úkolech šablony zaučení</value>
+    </caseValues>
+</CustomObjectTranslation>

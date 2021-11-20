@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <name>Community_Page_Onboarding_Header</name>
+        <label>Découvrez votre équipe d&apos;intégration</label>
+    </customLabels>
+    <customLabels>
+        <name>Flow_Onboarding_Checklist_Header</name>
+        <label>Ma liste de contrôle d&apos;intégration</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Mark_Task_As_Completed</name>
+        <label>Marquer la tâche comme terminée</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Next</name>
+        <label>Suivant</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Previous</name>
+        <label>Précédent</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Save</name>
+        <label>Enregistrer</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Submit</name>
+        <label>Soumettre</label>
+    </customLabels>
+    <customLabels>
+        <name>Onboarding_Page_Contact_Name_HR_Contact</name>
+        <label>Votre contact RH</label>
+    </customLabels>
+    <customLabels>
+        <name>Onboarding_Page_Contact_Name_HR_Manager</name>
+        <label>Votre responsable RH</label>
+    </customLabels>
+    <customLabels>
+        <name>Tasks_On_Employee_Related_List_Header</name>
+        <label>Tâches d&apos;intégration</label>
+    </customLabels>
+    <customLabels>
+        <name>Tasks_On_Employee_Related_List_No_Tasks_Found</name>
+        <label>Aucune tâche d&apos;intégration trouvée</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Hero_Banner_Header</name>
+        <label>Bienvenue {{firstName}} !</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_Header_Tasks_Completed</name>
+        <label>Tâches d&apos;intégration</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_Header_Tasks_Open</name>
+        <label>Préparons votre intégration !</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_Open_Tasks</name>
+        <label>Tâches en cours</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_See_All_Tasks</name>
+        <label>Afficher toutes les tâches</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_Subheader_Tasks_Completed</name>
+        <label>Vous savez tout !</label>
+    </customLabels>
+    <flowDefinitions>
+        <flows>
+            <fullName>Sample_welcome_video</fullName>
+            <label>Vidéo de bienvenue</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;[Exemple] Bienvenue dans l&apos;équipe&amp;nbsp;! Regardez cette vidéo pour mieux nous connaître.&amp;nbsp; &lt;/p&gt;</fieldText>
+                    <name>Body</name>
+                </fields>
+                <name>Onboarding_Video_Screen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;b&gt;Parfait&amp;nbsp;!&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;Vous progressez bien. Continuez&amp;nbsp;!&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+                    <name>Complete_Display_Text</name>
+                </fields>
+                <name>Thank_You_Screen</name>
+            </screens>
+        </flows>
+        <fullName>Sample_welcome_video</fullName>
+        <label>Vidéo de bienvenue</label>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Sample_ergonomic_assessment</fullName>
+            <label>[Exemple] Évaluation ergonomique</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;[Exemple]&lt;span style=&quot;background-color: transparent; color: rgb(0, 0, 0); font-family: Arial; font-size: 11pt;&quot;&gt; &lt;/span&gt;&lt;a href=&quot;/sample/s/case/{!CreateCase}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;La requête {!GetCaseRecord.CaseNumber}&lt;/a&gt; a été créée pour vous. Un spécialiste RH va bientôt vous contacter. Accédez à &lt;a href=&quot;/sample/s/case/Case/Default&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Mes requêtes&lt;/a&gt; pour vérifier le statut actuel.&lt;/p&gt;</fieldText>
+                    <name>Confirmation_Message</name>
+                </fields>
+                <name>Confirmation_Screen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;[Exemple] L&apos;aménagement ergonomique de votre bureau est important. Notre équipe d&apos;experts peut vous aider à évaluer votre situation et suggérer un équipement de bureau adapté.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Cliquez sur &apos;Suivant&apos; pour continuer.&lt;/p&gt;</fieldText>
+                    <name>General_Information</name>
+                </fields>
+                <name>General_Info</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;Chargez une photo de votre zone de travail, puis cliquez sur Soumettre. Veillez à ne montrer aucune information confidentielle ou personnelle sur votre photo.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Une requête sera créée pour vous et un spécialiste RH vous contactera.&lt;/p&gt;</fieldText>
+                    <name>General_Information2</name>
+                </fields>
+                <name>Upload_Files</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(247, 3, 3);&quot;&gt;Vous devez joindre au moins un fichier avant de continuer. &lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>Error_Message</name>
+                </fields>
+                <name>Validation</name>
+            </screens>
+        </flows>
+        <fullName>Sample_ergonomic_assessment</fullName>
+        <label>[Exemple] Évaluation ergonomique</label>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>AssignOnboardingTasks</fullName>
+            <label>Attribuer des tâches d&apos;intégration</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;color: rgb(0, 0, 0); background-color: transparent; font-size: 16px;&quot;&gt;Tâches d&apos;intégration attribuées avec succès&amp;nbsp;!&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: transparent; font-size: 14px;&quot;&gt;Pour afficher le statut des tâches d&apos;intégration, accédez à votre enregistrement d&apos;employé.&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>Complete_Display_Text_0_0</name>
+                </fields>
+                <name>Confirmation_Screen_0</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;Le Centre de services RH prend en charge les modèles d&apos;intégration en masse. Pour démarrer le processus d&apos;intégration, sélectionnez vos modèles, puis cliquez sur Attribuer.&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>AssignObBoardingTexBody</name>
+                </fields>
+                <fields>
+                    <fieldText>Sélectionnez des modèles d&apos;intégration.</fieldText>
+                    <name>Select_onboarding_templates</name>
+                </fields>
+                <name>Multi_select_Onboarding_Templates</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;Aucun modèle d&apos;intégration actif trouvé&amp;nbsp;!&lt;/p&gt;</fieldText>
+                    <name>NoActiveOnBoardingTemplatetext</name>
+                </fields>
+                <name>Thank_You_Screen</name>
+            </screens>
+        </flows>
+        <fullName>AssignOnboardingTasks</fullName>
+        <label>Attribuer des tâches d&apos;intégration</label>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Review_Documents</fullName>
+            <label>Vérifier les documents</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;[Exemple] Un e-mail vous a été envoyé ainsi qu&apos;à votre responsable.&lt;/p&gt;</fieldText>
+                    <name>Confirmation_Page_Content</name>
+                </fields>
+                <name>ConfirmationPage</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;À propos de nous&lt;/p&gt;</fieldText>
+                    <name>HeaderTop</name>
+                </fields>
+                <fields>
+                    <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);&quot;&gt;[Exemple] &lt;/span&gt;&lt;a href=&quot;https://salesforce.com/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;background-color: rgb(255, 255, 255);&quot;Historique de l&apos;entreprise&lt;/a&gt;&lt;/p&gt;&lt;p&gt;[Exemple] Prenez le temps de découvrir l&apos;historique de notre entreprise.&lt;/p&gt;</fieldText>
+                    <name>Body1</name>
+                </fields>
+                <fields>
+                    <fieldText>Compris !</fieldText>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;Vous devez accepter avant de soumettre.&lt;/p&gt;</errorMessage>
+                    </validationRule>
+                    <name>Checkbox1</name>
+                </fields>
+                <fields>
+                    <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255);&quot;&gt;[Exemple] &lt;/span&gt;&lt;a href=&quot;https://salesforce.com/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Congés d&apos;entreprise&lt;/a&gt;&lt;/p&gt;&lt;p&gt;[Exemple] Planifier vos congés.&lt;/p&gt;</fieldText>
+                    <name>Body2</name>
+                </fields>
+                <fields>
+                    <fieldText>Compris !</fieldText>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;Vous devez accepter avant de soumettre.&lt;/p&gt;</errorMessage>
+                    </validationRule>
+                    <name>Checkbox2</name>
+                </fields>
+                <fields>
+                    <fieldText>&lt;p&gt;[Exemple] Cliquez sur Soumettre. Nous vous enverrons, ainsi qu&apos;à votre responsable, un e-mail confirmant que vous avez consulté ces informations.&lt;/p&gt;</fieldText>
+                    <name>Body3</name>
+                </fields>
+                <name>Review_Documents</name>
+            </screens>
+        </flows>
+        <fullName>Review_Documents</fullName>
+        <label>Vérifier les documents</label>
+    </flowDefinitions>
+    <quickActions>
+        <name>Employee.AssignOnboarding</name>
+        <label>Attribuer l&apos;intégration</label>
+    </quickActions>
+</Translations>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <nameFieldLabel>Şablon Görevi Adı</nameFieldLabel>
+    <standardFields>
+        <name>Name</name>
+        <label>Şablon Görevi Adı</label>
+    </standardFields>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Nominative</caseType>
+        <possessive>None</possessive>
+        <value>İşe Alıştırma Şablon Görevi</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Nominative</caseType>
+        <possessive>First</possessive>
+        <value>İşe Alıştırma Şablon Görevim</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Nominative</caseType>
+        <possessive>Second</possessive>
+        <value>İşe Alıştırma Şablon Göreviniz</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Nominative</caseType>
+        <possessive>None</possessive>
+        <value>İşe Alıştırma Şablon Görevleri</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Nominative</caseType>
+        <possessive>First</possessive>
+        <value>İşe Alıştırma Şablon Görevlerim</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Nominative</caseType>
+        <possessive>Second</possessive>
+        <value>İşe Alıştırma Şablon Görevleriniz</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Genitive</caseType>
+        <possessive>None</possessive>
+        <value>İşe Alıştırma Şablon Görevinin</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Genitive</caseType>
+        <possessive>First</possessive>
+        <value>İşe Alıştırma Şablon Görevimin</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Genitive</caseType>
+        <possessive>Second</possessive>
+        <value>İşe Alıştırma Şablon Görevinizin</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Genitive</caseType>
+        <possessive>None</possessive>
+        <value>İşe Alıştırma Şablon Görevlerinin</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Genitive</caseType>
+        <possessive>First</possessive>
+        <value>İşe Alıştırma Şablon Görevlerimin</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Genitive</caseType>
+        <possessive>Second</possessive>
+        <value>İşe Alıştırma Şablon Görevlerinizin</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Dative</caseType>
+        <possessive>None</possessive>
+        <value>İşe Alıştırma Şablon Görevine</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Dative</caseType>
+        <possessive>First</possessive>
+        <value>İşe Alıştırma Şablon Görevime</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Dative</caseType>
+        <possessive>Second</possessive>
+        <value>İşe Alıştırma Şablon Görevinize</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Dative</caseType>
+        <possessive>None</possessive>
+        <value>İşe Alıştırma Şablon Görevlerine</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Dative</caseType>
+        <possessive>First</possessive>
+        <value>İşe Alıştırma Şablon Görevlerime</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Dative</caseType>
+        <possessive>Second</possessive>
+        <value>İşe Alıştırma Şablon Görevlerinize</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Accusative</caseType>
+        <possessive>None</possessive>
+        <value>İşe Alıştırma Şablon Görevini</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Accusative</caseType>
+        <possessive>First</possessive>
+        <value>İşe Alıştırma Şablon Görevimi</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Accusative</caseType>
+        <possessive>Second</possessive>
+        <value>İşe Alıştırma Şablon Görevinizi</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Accusative</caseType>
+        <possessive>None</possessive>
+        <value>İşe Alıştırma Şablon Görevlerini</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Accusative</caseType>
+        <possessive>First</possessive>
+        <value>İşe Alıştırma Şablon Görevlerimi</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Accusative</caseType>
+        <possessive>Second</possessive>
+        <value>İşe Alıştırma Şablon Görevlerinizi</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Locative</caseType>
+        <possessive>None</possessive>
+        <value>İşe Alıştırma Şablon Görevinde</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Locative</caseType>
+        <possessive>First</possessive>
+        <value>İşe Alıştırma Şablon Görevimde</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Locative</caseType>
+        <possessive>Second</possessive>
+        <value>İşe Alıştırma Şablon Görevinizde</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Locative</caseType>
+        <possessive>None</possessive>
+        <value>İşe Alıştırma Şablon Görevlerinde</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Locative</caseType>
+        <possessive>First</possessive>
+        <value>İşe Alıştırma Şablon Görevlerimde</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Locative</caseType>
+        <possessive>Second</possessive>
+        <value>İşe Alıştırma Şablon Görevlerinizde</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Ablative</caseType>
+        <possessive>None</possessive>
+        <value>İşe Alıştırma Şablon Görevinden</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Ablative</caseType>
+        <possessive>First</possessive>
+        <value>İşe Alıştırma Şablon Görevimden</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Ablative</caseType>
+        <possessive>Second</possessive>
+        <value>İşe Alıştırma Şablon Görevinizden</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Ablative</caseType>
+        <possessive>None</possessive>
+        <value>İşe Alıştırma Şablon Görevlerinden</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Ablative</caseType>
+        <possessive>First</possessive>
+        <value>İşe Alıştırma Şablon Görevlerimden</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Ablative</caseType>
+        <possessive>Second</possessive>
+        <value>İşe Alıştırma Şablon Görevlerinizden</value>
+    </caseValues>
+</CustomObjectTranslation>

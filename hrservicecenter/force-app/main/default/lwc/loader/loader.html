@@ -1,0 +1,22 @@
+<!--
+- @author  rkolasinski
+- @date    4/12/21
+- @description Wrapper component for standard lightning-spinner component.
+- Allows to increment a loading indicator counter which prevents
+- the lightning-spinner component from hiding in between queued backend calls
+- and/or any other asynchronous operations.
+- @log
+- =============================================================================
+- Date        Developer            Description
+- =============================================================================
+- 4/12/21     rkolasinski      US-8 - created.
+-->
+
+<template>
+    <template if:true={isLoaderVisible}>
+        <lightning-spinner
+            size="medium"
+            alternative-text="Loading"
+        ></lightning-spinner>
+    </template>
+</template>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <name>Community_Page_Onboarding_Header</name>
+        <label>Upoznajte svoj tim za uključivanje zaposlenika</label>
+    </customLabels>
+    <customLabels>
+        <name>Flow_Onboarding_Checklist_Header</name>
+        <label>Moj popis za provjeru uključivanja zaposlenika</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Mark_Task_As_Completed</name>
+        <label>Označi zadatak kao dovršen</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Next</name>
+        <label>Sljedeće</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Previous</name>
+        <label>Prethodno</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Save</name>
+        <label>Spremi</label>
+    </customLabels>
+    <customLabels>
+        <name>Form_Button_Submit</name>
+        <label>Pošalji</label>
+    </customLabels>
+    <customLabels>
+        <name>Onboarding_Page_Contact_Name_HR_Contact</name>
+        <label>Vaš kontakt za ljudske potencijale</label>
+    </customLabels>
+    <customLabels>
+        <name>Onboarding_Page_Contact_Name_HR_Manager</name>
+        <label>Vaš rukovoditelj za ljudske potencijale</label>
+    </customLabels>
+    <customLabels>
+        <name>Tasks_On_Employee_Related_List_Header</name>
+        <label>Zadaci uključivanja zaposlenika</label>
+    </customLabels>
+    <customLabels>
+        <name>Tasks_On_Employee_Related_List_No_Tasks_Found</name>
+        <label>Nije pronađen nijedan zadatak uključivanja zaposlenika</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Hero_Banner_Header</name>
+        <label>Dobro došao/la, {{firstName}}!</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_Header_Tasks_Completed</name>
+        <label>Zadaci uključivanja zaposlenika</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_Header_Tasks_Open</name>
+        <label>Postavimo sve za početak rada!</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_Open_Tasks</name>
+        <label>Otvoreni zadaci</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_See_All_Tasks</name>
+        <label>Pogledajte sve zadatke</label>
+    </customLabels>
+    <customLabels>
+        <name>Welcome_Task_Subheader_Tasks_Completed</name>
+        <label>Saznali ste sve novosti!</label>
+    </customLabels>
+    <flowDefinitions>
+        <flows>
+            <fullName>Sample_welcome_video</fullName>
+            <label>Videozapis dobrodošlice</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;[Uzorak] Dobro došli u tim! Pogledajte ovaj videozapis kako bismo vas upoznali s našom pričom.&amp;nbsp; &lt;/p&gt;</fieldText>
+                    <name>Body</name>
+                </fields>
+                <name>Onboarding_Video_Screen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;b&gt;Izgleda dobro!&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;Tako se rješavaju stvari. Samo tako nastavite!&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+                    <name>Complete_Display_Text</name>
+                </fields>
+                <name>Thank_You_Screen</name>
+            </screens>
+        </flows>
+        <fullName>Sample_welcome_video</fullName>
+        <label>Videozapis dobrodošlice</label>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Sample_ergonomic_assessment</fullName>
+            <label>[Uzorak] Ergonomska procjena</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;[Uzorak]&lt;span style=&quot;background-color: transparent; color: rgb(0, 0, 0); font-family: Arial; font-size: 11pt;&quot;&gt; &lt;/span&gt;&lt;a href=&quot;/sample/s/case/{!CreateCase}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Za vas je kreiran {!GetCaseRecord.CaseNumber}&lt;/a&gt; slučaj. Stručnjak za ljudske potencijale će kontaktirati s vama. Idite na stavku &lt;a href=&quot;/sample/s/case/Case/Default&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Moji slučajevi&lt;/a&gt; kako biste provjerili trenutačni status.&lt;/p&gt;</fieldText>
+                    <name>Confirmation_Message</name>
+                </fields>
+                <name>Confirmation_Screen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;[Uzorak] Ergonomija vašeg kućnog ureda vrlo je važna. Imamo tim stručnjaka koji mogu procijeniti vašu situaciju i predložiti vam opremu za vaš kućni ured.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Kliknite ‘Dalje’ kako biste nastavili.&lt;/p&gt;</fieldText>
+                    <name>General_Information</name>
+                </fields>
+                <name>General_Info</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;Prenesite fotografiju svog radnog prostora i kliknite Pošalji. Pobrinite se da ona ne sadrži osjetljive ili osobne podatke.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Za vas ćemo kreirati slučaj i stručnjak za ljudske potencijale će kontaktirati s vama.&lt;/p&gt;</fieldText>
+                    <name>General_Information2</name>
+                </fields>
+                <name>Upload_Files</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(247, 3, 3);&quot;&gt;Morate priložiti najmanje jednu datoteku kako biste nastavili. &lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>Error_Message</name>
+                </fields>
+                <name>Validation</name>
+            </screens>
+        </flows>
+        <fullName>Sample_ergonomic_assessment</fullName>
+        <label>[Uzorak] Ergonomska procjena</label>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>AssignOnboardingTasks</fullName>
+            <label>Dodijelite zadatke uključivanja zaposlenika</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;color: rgb(0, 0, 0); background-color: transparent; font-size: 16px;&quot;&gt;Zadaci uključivanja zaposlenika uspješno su dodijeljeni!&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: transparent; font-size: 14px;&quot;&gt;Kako biste pregledali status zadataka uključivanja zaposlenika, idite na zapis zaposlenika.&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>Complete_Display_Text_0_0</name>
+                </fields>
+                <name>Confirmation_Screen_0</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;Uslužni centar za ljudske potencijale podržava predloške za skupno uključivanje zaposlenika. Kako biste započeli postupak uključivanja zaposlenika, odaberite svoje predloške i potom kliknite Dodijeli.&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>AssignObBoardingTexBody</name>
+                </fields>
+                <fields>
+                    <fieldText>Odaberite predloške uključivanja zaposlenika.</fieldText>
+                    <name>Select_onboarding_templates</name>
+                </fields>
+                <name>Multi_select_Onboarding_Templates</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;Nije pronađen nijedan aktivan predložak uključivanja zaposlenika!&lt;/p&gt;</fieldText>
+                    <name>NoActiveOnBoardingTemplatetext</name>
+                </fields>
+                <name>Thank_You_Screen</name>
+            </screens>
+        </flows>
+        <fullName>AssignOnboardingTasks</fullName>
+        <label>Dodijelite zadatke uključivanja zaposlenika</label>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Review_Documents</fullName>
+            <label>Pregledajte dokumente</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;[Uzorak] Vama i vašem rukovoditelju poslana je e-pošta.&lt;/p&gt;</fieldText>
+                    <name>Confirmation_Page_Content</name>
+                </fields>
+                <name>ConfirmationPage</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;O nama&lt;/p&gt;</fieldText>
+                    <name>HeaderTop</name>
+                </fields>
+                <fields>
+                    <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);&quot;&gt;[Uzorak] &lt;/span&gt;&lt;a href=&quot;https://salesforce.com/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Povijest tvrtke&lt;/a&gt;&lt;/p&gt;&lt;p&gt;[Uzorak] Odvojite malo vremena kako biste se upoznali s poviješću naše tvrtke.&lt;/p&gt;</fieldText>
+                    <name>Body1</name>
+                </fields>
+                <fields>
+                    <fieldText>U redu!</fieldText>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;Prije slanja morate dati svoj pristanak.&lt;/p&gt;</errorMessage>
+                    </validationRule>
+                    <name>Checkbox1</name>
+                </fields>
+                <fields>
+                    <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255);&quot;&gt;[Uzorak] &lt;/span&gt;&lt;a href=&quot;https://salesforce.com/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Godišnji odmor u tvrtki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;[Uzorak] Unaprijed planirajte svoj godišnji odmor.&lt;/p&gt;</fieldText>
+                    <name>Body2</name>
+                </fields>
+                <fields>
+                    <fieldText>U redu!</fieldText>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;Prije slanja morate dati svoj pristanak.&lt;/p&gt;</errorMessage>
+                    </validationRule>
+                    <name>Checkbox2</name>
+                </fields>
+                <fields>
+                    <fieldText>&lt;p&gt;[Uzorak] Kliknite Pošalji i poslat ćemo vama i vašem rukovoditelju e-poštu s potvrdom da ste pregledali ove informacije.&lt;/p&gt;</fieldText>
+                    <name>Body3</name>
+                </fields>
+                <name>Review_Documents</name>
+            </screens>
+        </flows>
+        <fullName>Review_Documents</fullName>
+        <label>Pregledajte dokumente</label>
+    </flowDefinitions>
+    <quickActions>
+        <name>Employee.AssignOnboarding</name>
+        <label>Dodijelite uključivanje zaposlenika</label>
+    </quickActions>
+</Translations>

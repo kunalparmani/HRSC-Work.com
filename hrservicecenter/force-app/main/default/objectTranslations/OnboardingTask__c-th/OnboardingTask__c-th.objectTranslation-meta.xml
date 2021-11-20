@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <nameFieldLabel>ชื่องาน</nameFieldLabel>
+    <standardFields>
+        <name>Name</name>
+        <label>ชื่องาน</label>
+    </standardFields>
+    <caseValues>
+        <plural>false</plural>
+        <value>งานการเตรียมความพร้อม</value>
+    </caseValues>
+</CustomObjectTranslation>

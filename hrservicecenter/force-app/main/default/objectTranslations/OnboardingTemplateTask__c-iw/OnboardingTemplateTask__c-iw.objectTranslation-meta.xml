@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <nameFieldLabel>שם תבנית קליטה</nameFieldLabel>
+    <standardFields>
+        <name>Name</name>
+        <label>שם תבנית קליטה</label>
+    </standardFields>
+    <gender>Feminine</gender>
+    <caseValues>
+        <plural>false</plural>
+        <article>None</article>
+        <value>משימה בתבנית קליטה</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <article>None</article>
+        <value>משימות בתבנית קליטה</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <article>Definite</article>
+        <value>המשימה בתבנית הקליטה</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <article>Definite</article>
+        <value>המשימות בתבנית הקליטה</value>
+    </caseValues>
+</CustomObjectTranslation>

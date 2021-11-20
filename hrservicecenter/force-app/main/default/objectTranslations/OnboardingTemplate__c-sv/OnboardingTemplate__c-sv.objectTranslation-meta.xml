@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <nameFieldLabel>Namn på mall</nameFieldLabel>
+    <standardFields>
+        <name>Name</name>
+        <label>Namn på mall</label>
+    </standardFields>
+    <gender>Neuter</gender>
+    <caseValues>
+        <plural>false</plural>
+        <article>None</article>
+        <value>Onboardingmall</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <article>None</article>
+        <value>Onboardingmallar</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <article>Indefinite</article>
+        <value>Onboardingmallar</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <article>Indefinite</article>
+        <value>Onboardingmall</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <article>Definite</article>
+        <value>Onboardingmallen</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <article>Definite</article>
+        <value>Onboardingmallarna</value>
+    </caseValues>
+</CustomObjectTranslation>

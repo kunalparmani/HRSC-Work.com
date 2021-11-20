@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <nameFieldLabel>Назва завдання шаблона</nameFieldLabel>
+    <standardFields>
+        <name>Name</name>
+        <label>Назва завдання шаблона</label>
+    </standardFields>
+    <gender>Neuter</gender>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Nominative</caseType>
+        <value>Завдання шаблону адаптації</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Nominative</caseType>
+        <value>Завдання шаблону адаптації</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Accusative</caseType>
+        <value>Завдання шаблону адаптації</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Accusative</caseType>
+        <value>Завдання шаблону адаптації</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Dative</caseType>
+        <value>Завданню шаблону адаптації</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Dative</caseType>
+        <value>Завданням шаблону адаптації</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Genitive</caseType>
+        <value>Завдання шаблону адаптації</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Genitive</caseType>
+        <value>Завдань шаблону адаптації</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Instrumental</caseType>
+        <value>Завданням шаблону адаптації</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Instrumental</caseType>
+        <value>Завданнями шаблону адаптації</value>
+    </caseValues>
+    <caseValues>
+        <plural>false</plural>
+        <caseType>Locative</caseType>
+        <value>Завданні шаблону адаптації</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <caseType>Locative</caseType>
+        <value>Завданнях шаблону адаптації</value>
+    </caseValues>
+</CustomObjectTranslation>

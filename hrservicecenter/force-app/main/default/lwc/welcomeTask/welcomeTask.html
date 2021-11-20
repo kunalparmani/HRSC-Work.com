@@ -1,0 +1,60 @@
+<!--
+- @author  rkolasinski
+- @date    5/25/21
+- @description LWC responsible for displaying information around completed/not completed
+- onboarding tasks. The component has 3 states:
+- • hidden - when the Employee has no onboarding tasks,
+- • visible w/ # of tasks - when the Employee has 1+ not completed tasks,
+- • visible w/ no # of tasks - when the Employee has 1+ tasks, all with completed status.
+-
+- Component footer contains a link navigating to the community page with the full list
+- of available onboarding tasks.
+- @log
+- =============================================================================
+- Date        Developer            Description
+- =============================================================================
+- 5/25/21     rkolasinski          W-000128 - created.
+-->
+
+<template>
+    <article if:true={showContent} class="welcome-task-card slds-card">
+        <!-- Header content -->
+        <div class="slds-card__header slds-grid slds-m-bottom_large">
+            <header
+                class="slds-media slds-media_center slds-has-flexi-truncate"
+            >
+                <div class="slds-media__body">
+                    <h2
+                        class="welcome-task-header slds-card__header-title slds-m-bottom_small"
+                    >
+                        {welcomeTaskHeader}
+                    </h2>
+                    <h3 if:true={showSubheader} class="welcome-task-subheader">
+                        {labels.WELCOME_TASK_SUBHEADER_TASKS_COMPLETED}
+                    </h3>
+                </div>
+            </header>
+        </div>
+
+        <!-- Body content -->
+        <div
+            if:true={openTasks}
+            class="welcome-task-body slds-card__body slds-m-bottom_large"
+        >
+            <div class="container-open-tasks">
+                <div class="open-tasks slds-m-bottom_x-small">{openTasks}</div>
+                <div class="open-tasks-description">
+                    {labels.WELCOME_TASK_OPEN_TASKS}
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer content -->
+        <footer class="welcome-task-footer slds-card__footer">
+            <a class="slds-card__footer-action" href="" onclick={openAllTasks}>
+                {labels.WELCOME_TASK_SEE_ALL_TASKS}
+                <span class="slds-assistive-text"> Tasks </span>
+            </a>
+        </footer>
+    </article>
+</template>

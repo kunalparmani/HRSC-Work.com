@@ -1,0 +1,31 @@
+- option: num_knowledge
+  default: 10
+
+############################
+# KnowledgeArticle         #
+############################
+
+# Due to a bug in Snowfakery, I cannot just put a "random_choice" selector on RecordType
+# CCI will download the corresponding Ids, and it doesn't like having complex
+# computation there. So I manually made the 50% split.
+# The subtraction is there for odd numbers.
+
+- object: Knowledge__kav
+  count: ${{int(num_knowledge)/2}}
+  fields:
+      Title: Perf article ${{" ".join(fake.words(nb=5))}}
+      Body__c: ${{fake.paragraph(3,True)}}
+      UrlName: help-desk-perf-data-${{id}}-${{"-".join(fake.words(nb=2))}}
+      CaseSubject__c: Perf knowledge ${{id}} ${{" ".join(fake.words(nb=2))}}
+      CaseDescription__c: Perf ${{id}} ${{" ".join(fake.words(nb=5))}}
+      RecordType: IT_Knowledge_Article
+
+- object: Knowledge__kav
+  count: ${{int(num_knowledge) - int(num_knowledge)/2}}
+  fields:
+      Title: Perf article ${{" ".join(fake.words(nb=5))}}
+      Body__c: ${{fake.paragraph(3,True)}}
+      UrlName: help-desk-perf-data-${{id}}-${{"-".join(fake.words(nb=2))}}
+      CaseSubject__c: Perf knowledge ${{id}} ${{" ".join(fake.words(nb=2))}}
+      CaseDescription__c: Perf ${{id}} ${{" ".join(fake.words(nb=5))}}
+      RecordType: HR_Knowledge_Article

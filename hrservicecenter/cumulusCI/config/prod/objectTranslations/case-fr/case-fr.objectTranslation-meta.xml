@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <name>HR_Benefits</name>
+        <label>RH - Avantages</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_Employee_Relations</name>
+        <label>RH - Relations avec les employés</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_General</name>
+        <label>RH - Général</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_Leave</name>
+        <label>RH - Congés</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_Onboarding</name>
+        <label>RH - Intégration</label>
+    </recordTypes>
+    <recordTypes>
+        <name>HR_Payroll</name>
+        <label>RH - Rémunérations</label>
+    </recordTypes>
+</CustomObjectTranslation>

@@ -1,0 +1,140 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Location",
+                "referenceId": "country265742670"
+            },
+            "name": "United States",
+            "Description": "United States of America",
+            "TimeZone": "America/Indiana/Indianapolis",
+            "LocationType": "Site",
+            "ChildLocations": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Location",
+                            "referenceId": "state1933692057"
+                        },
+                        "name": "California",
+                        "Description": "California",
+                        "TimeZone": "America/Los_Angeles",
+                        "LocationType": "Site",
+                        "ChildLocations": {
+                            "records": [
+                                {
+                                    "attributes": {
+                                        "type": "Location",
+                                        "referenceId": "city1865366464"
+                                    },
+                                    "name": "San Francisco",
+                                    "Description": "San Francisco",
+                                    "TimeZone": "America/Los_Angeles",
+                                    "LocationType": "Site",
+                                    "ChildLocations": {
+                                        "records": []
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "attributes": {
+                            "type": "Location",
+                            "referenceId": "state1037202509"
+                        },
+                        "name": "Washington",
+                        "Description": "Washington",
+                        "TimeZone": "America/Los_Angeles",
+                        "LocationType": "Site",
+                        "ChildLocations": {
+                            "records": [
+                                {
+                                    "attributes": {
+                                        "type": "Location",
+                                        "referenceId": "city608012973"
+                                    },
+                                    "name": "Seattle",
+                                    "Description": "Seattle",
+                                    "TimeZone": "America/Los_Angeles",
+                                    "LocationType": "Site",
+                                    "ChildLocations": {
+                                        "records": []
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "attributes": {
+                            "type": "Location",
+                            "referenceId": "state295650081"
+                        },
+                        "name": "Colorado",
+                        "Description": "Colorado",
+                        "TimeZone": "America/Denver",
+                        "LocationType": "Site",
+                        "ChildLocations": {
+                            "records": [
+                                {
+                                    "attributes": {
+                                        "type": "Location",
+                                        "referenceId": "city1361234451"
+                                    },
+                                    "name": "Denver",
+                                    "Description": "Denver",
+                                    "TimeZone": "America/Denver",
+                                    "LocationType": "Site",
+                                    "ChildLocations": {
+                                        "records": []
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "attributes": {
+                "type": "Location",
+                "referenceId": "country84797743"
+            },
+            "name": "United Kingdom",
+            "Description": "United Kingdom",
+            "TimeZone": "Europe/London",
+            "LocationType": "Site",
+            "ChildLocations": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Location",
+                            "referenceId": "state669668571"
+                        },
+                        "name": "London (County)",
+                        "Description": "London (County)",
+                        "TimeZone": "Europe/London",
+                        "LocationType": "Site",
+                        "ChildLocations": {
+                            "records": [
+                                {
+                                    "attributes": {
+                                        "type": "Location",
+                                        "referenceId": "city1583169659"
+                                    },
+                                    "name": "London (City)",
+                                    "Description": "London (City)",
+                                    "TimeZone": "Europe/London",
+                                    "LocationType": "Site",
+                                    "ChildLocations": {
+                                        "records": []
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

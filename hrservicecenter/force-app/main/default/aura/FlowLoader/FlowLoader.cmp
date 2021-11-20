@@ -1,0 +1,29 @@
+<aura:component
+    implements="forceCommunity:availableForAllPageTypes"
+    access="global"
+    controller="OnboardingFeatureAccess"
+>
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <aura:attribute name="hasFlow" type="Boolean" default="false" />
+    <aura:attribute name="flowAPIName" type="String" default="" />
+    <aura:attribute name="taskId" type="String" default="" />
+    <aura:attribute name="hasOnboardingAccess" type="Boolean" />
+    <lightning:messageChannel
+        aura:id="messageChannel"
+        type="onboardingChecklist__c"
+        onMessage="{!c.onMessage}"
+    />
+
+    <c:OnboardingChecklistService aura:id="onboardingChecklistService" />
+
+    <aura:if isTrue="{!and(v.hasOnboardingAccess, v.hasFlow)}">
+        <div class="slds-card">
+            <div class="slds-card__body">
+                <lightning:flow
+                    aura:id="flowControl"
+                    onstatuschange="{!c.flowStatusChange}"
+                />
+            </div>
+        </div>
+    </aura:if>
+</aura:component>

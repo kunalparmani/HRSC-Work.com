@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Community_Page_Onboarding_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Header content for the onboarding community page.</shortDescription>
+        <value>Meet your onboarding team</value>
+    </labels>
+    <labels>
+        <fullName>Employee_Without_User_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Employee Without User Error</shortDescription>
+        <value>This Employee record does not have an associated User record.</value>
+    </labels>
+    <labels>
+        <fullName>Flow_Onboarding_Checklist_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Header for the Onboarding Checklist LWC.</shortDescription>
+        <value>My Onboarding Checklist</value>
+    </labels>
+    <labels>
+        <fullName>Form_Button_Mark_Task_As_Completed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>&quot;Mark Task as Completed&quot; button label of the flow navigation.</shortDescription>
+        <value>Mark task as completed</value>
+    </labels>
+    <labels>
+        <fullName>Form_Button_Next</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>&quot;Next&quot; button label of the flow navigation.</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>Form_Button_Previous</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>&quot;Previous&quot; button label of the flow navigation.</shortDescription>
+        <value>Previous</value>
+    </labels>
+    <labels>
+        <fullName>Form_Button_Save</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>&quot;Save&quot; button label of the flow navigation.</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>Form_Button_Submit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>&quot;Submit&quot; button label of the flow navigation.</shortDescription>
+        <value>Submit</value>
+    </labels>
+    <labels>
+        <fullName>Onboarding_Page_Contact_Name_HR_Contact</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HR Contact name for the onboarding page header.</shortDescription>
+        <value>Your HR Contact</value>
+    </labels>
+    <labels>
+        <fullName>Onboarding_Page_Contact_Name_HR_Manager</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HR Manager name for the onboarding page header.</shortDescription>
+        <value>Your HR Manager</value>
+    </labels>
+    <labels>
+        <fullName>Tasks_On_Employee_Related_List_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Header of the Onboarding Tasks related list.</shortDescription>
+        <value>Onboarding Tasks</value>
+    </labels>
+    <labels>
+        <fullName>Tasks_On_Employee_Related_List_No_Tasks_Found</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>"No tasks found" label for the Onboarding Tasks related list.</shortDescription>
+        <value>No onboarding tasks found</value>
+    </labels>
+    <labels>
+        <fullName>Welcome_Hero_Banner_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Header content for the Welcome Hero Banner component.</shortDescription>
+        <value>Welcome, {{firstName}}!</value>
+    </labels>
+    <labels>
+        <fullName>Welcome_Task_Header_Tasks_Completed</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Header for the Welcome Task LWC version with no open tasks.</shortDescription>
+        <value>Onboarding Tasks</value>
+    </labels>
+    <labels>
+        <fullName>Welcome_Task_Header_Tasks_Open</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Header for the Welcome Task LWC version with open tasks.</shortDescription>
+        <value>Let&apos;s get you up and running!</value>
+    </labels>
+    <labels>
+        <fullName>Welcome_Task_Open_Tasks</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Description for the &quot;Open tasks&quot; section of Welcome Task LWC.</shortDescription>
+        <value>Open Tasks</value>
+    </labels>
+    <labels>
+        <fullName>Welcome_Task_See_All_Tasks</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Call to action content for Welcome Task footer.</shortDescription>
+        <value>See All Tasks</value>
+    </labels>
+    <labels>
+        <fullName>Welcome_Task_Subheader_Tasks_Completed</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Subheader for the Welcome Task LWC version with no open tasks.</shortDescription>
+        <value>You&apos;re all caught up!</value>
+    </labels>
+    <labels>
+        <fullName>Object_Permissions_Error_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Object Permissions Error Message</shortDescription>
+        <value>You do not have the required permissions for {0}. Contact your system administrator.</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,82 @@
+Insert InternalOrganizationUnit:
+    sf_object: InternalOrganizationUnit
+    fields:
+        # Id: Id
+        OrganizationCode: OrganizationCode
+        Description: Description
+    lookups:
+        ParentOrganizationId:
+            table: InternalOrganizationUnit
+            after: Insert InternalOrganizationUnit
+Insert Location:
+    sf_object: Location
+    fields:
+        # Id: Id
+        Description: Description
+        TimeZone: TimeZone
+        IsInventoryLocation: IsInventoryLocation
+        IsMobile: IsMobile
+        LocationType: LocationType
+        Name: Name
+    lookups:
+        ParentLocationId:
+            table: Location
+            after: Insert Location
+Insert Address:
+    sf_object: Address
+    fields:
+        # Id: Id
+        Description: Description
+        Street: Street
+        City: City
+        State: State
+        PostalCode: PostalCode
+        Country: Country
+        LocationType: LocationType
+    lookups:
+        ParentId:
+            table: Location
+Insert Employee:
+    sf_object: Employee
+    fields:
+        # Id: Id
+        EmployeeNumber: EmployeeNumber
+        EmployeeStatus: EmployeeStatus
+        FirstName: FirstName
+        LastName: LastName
+        AboutMe: AboutMe
+        StatusAsOf: StatusAsOf
+        WorkerType: WorkerType
+        Email: Email
+        HomePhone: HomePhone
+        HomeCity: HomeCity
+        HomeCountry: HomeCountry
+        HomeStreet: HomeStreet
+        HomeState: HomeState
+        HomePostalCode: HomePostalCode
+        JobProfile: JobProfile
+        WorkPhone: WorkPhone
+        AlternateEmail: AlternateEmail
+        DateOfBirth: DateOfBirth
+        Gender: Gender
+        PreferredPronoun: PreferredPronoun
+        PreferredFirstName: PreferredFirstName
+
+    lookups:
+        InternalOrganizationUnitId:
+            table: InternalOrganizationUnit
+        LocationId:
+            table: Location
+        ManagerId:
+            table: Employee
+            after: Insert Employee
+Insert EmployeeWorkExperience__c:
+    sf_object: EmployeeWorkExperience__c
+    table: EmployeeWorkExperience__c
+    fields:
+        Name: Name
+        CompletionDate__c: CompletionDate
+        Description__c: Description
+        URLs__c: URLs
+        Role__c: Role
+        StartDate__c: StartDate

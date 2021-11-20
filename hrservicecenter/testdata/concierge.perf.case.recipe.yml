@@ -1,0 +1,114 @@
+- plugin: snowfakery.standard_plugins.datasets.Dataset
+
+- option: accountid_contactid_file # csv file name
+  default: accountid_contactid_1.csv
+- option: num_account # number of accounts to read from the csv
+  default: 1
+- option: num_case # number of cases for each account
+  default: 5
+- option: num_post # number of posts for each case
+  default: 2
+
+############################
+# Cases                    #
+############################
+
+- object: __accountid_contactid_hidden
+  count: ${{num_account}}
+
+  fields:
+      __accountid_contactid_from_csv:
+          Dataset.iterate:
+              dataset: ${{accountid_contactid_file}}
+
+      ContactId: ${{__accountid_contactid_from_csv.PersonContactId}}
+      AccountId: ${{__accountid_contactid_from_csv.Id}}
+
+  friends:
+      - object: Case
+        count: ${{num_case}}
+        fields:
+            __no_truncation:
+                random_choice:
+                    - choice:
+                          probability: 12%
+                          pick: Gaston
+                    - choice:
+                          probability: 12%
+                          pick: Lanfeust
+                    - choice:
+                          probability: 12%
+                          pick: Spirou
+                    - choice:
+                          probability: 12%
+                          pick: Boule
+                    - choice:
+                          probability: 13%
+                          pick: Asterix
+                    - choice:
+                          probability: 13%
+                          pick: Leonard
+                    - choice:
+                          probability: 13%
+                          pick: Romuald
+                    - choice:
+                          probability: 13%
+                          pick: Snoopy
+            Comments: ${{fake.paragraph(3,True)}}
+            Description: ${{fake.paragraph(3,True)}}
+            Status:
+                random_choice:
+                    - choice:
+                          probability: 40%
+                          pick: Closed
+                    - choice:
+                          probability: 40%
+                          pick: New
+                    - choice:
+                          probability: 15%
+                          pick: Working
+                    - choice:
+                          probability: 5%
+                          pick: Escalated
+            Priority:
+                random_choice:
+                    - choice:
+                          probability: 40%
+                          pick: Low
+                    - choice:
+                          probability: 40%
+                          pick: Medium
+                    - choice:
+                          probability: 20%
+                          pick: High
+            Type:
+                random_choice:
+                    - choice:
+                          probability: 40%
+                          pick: Other
+                    - choice:
+                          probability: 20%
+                          pick: Request
+                    - choice:
+                          probability: 40%
+                          pick: Electrical
+            Reason:
+                random_choice:
+                    - choice:
+                          probability: 75%
+                          pick: Installation
+                    - choice:
+                          probability: 25%
+                          pick: Other
+            Subject: Perf case ${{__no_truncation}} ${{id}} ${{" ".join(fake.words(nb=2))}}
+            ContactId: ${{__accountid_contactid_hidden.ContactId}}
+            AccountId: ${{__accountid_contactid_hidden.AccountId}}
+        friends:
+            - object: FeedItem
+              count: ${{num_post}}
+              fields:
+                  Type: TextPost
+                  NetworkScope: AllNetworks
+                  Body: ${{fake.paragraph(3,True)}}
+                  parentId:
+                      reference: Case

@@ -1,0 +1,58 @@
+{
+    "product": {
+        "title": {
+            "message": "HR Service Center",
+            "description": "name of product"
+        },
+        "short_description": {
+            "message": "With HR Service Center, HR Specialists can manage cases and automate employee-facing HR processes with out-of-the-box workflows.",
+            "description": "tagline of product"
+        }
+    },
+    "plan:install_and_configure": {
+        "title": {
+            "message": "Install and Configure HR Service Center",
+            "description": "title of installation plan"
+        }
+    },
+    "checks": {
+        "Enable My Domain in your org.": {
+            "message": "Enable My Domain in your org.",
+            "description": "shown if validation fails"
+        },
+        "You need the Employee Experience license to install this package. Talk to your account executive for details.": {
+            "message": "You need the Employee Experience license to install this package. Talk to your account executive for details.",
+            "description": "shown if validation fails"
+        },
+        "You need a Company Community license to install HR Service Center. Talk to your account executive for details.": {
+            "message": "You need a Company Community license, Employee Productivity Plus license, and Employee Service Agent license to install HR Service Center. Talk to your account executive for details.",
+            "description": "shown if validation fails"
+        },
+        "Person accounts must be enabled in your org before installing  HR Service Center. Talk to your account executive for details.": {
+            "message": "Person accounts must be enabled in your org before installing  HR Service Center. Talk to your account executive for details.",
+            "description": "shown if validation fails"
+        },
+        "You need the Knowledge User license to install HR Service Center. Talk to your account executive for details.": {
+            "message": "You need the Knowledge User license to install HR Service Center. Talk to your account executive for details.",
+            "description": "shown if validation fails"
+        }
+    },
+    "steps": {
+        "Install the HR Service Center managed package.": {
+            "message": "Install the HR Service Center managed package.",
+            "description": "title of installation step"
+        },
+        "Install HR Service Center metadata.": {
+            "message": "Install HR Service Center metadata.",
+            "description": "title of installation step"
+        },
+        "Create custom fields in the case object.": {
+            "message": "Create custom fields in the case object.",
+            "description": "title of installation step"
+        },
+        "Create case assignment rules.": {
+            "message": "Create case assignment rules.",
+            "description": "title of installation step"
+        }
+    }
+}
