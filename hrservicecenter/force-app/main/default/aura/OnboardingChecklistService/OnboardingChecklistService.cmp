@@ -1,9 +1,0 @@
-<aura:component controller="OnboardingChecklist">
-    <aura:method
-        name="getFlowAPIName"
-        action="{!c.getFlowAPIName}"
-        description="Invokes a server-side action call responsible for fetching the flow name."
-    >
-        <aura:attribute name="taskId" type="String" />
-    </aura:method>
-</aura:component>

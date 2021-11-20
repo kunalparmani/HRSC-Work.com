@@ -1,8 +1,0 @@
-{
-    "body": {
-        "message": "An internal server error has occurred"
-    },
-    "ok": false,
-    "status": 400,
-    "statusText": "Bad Request"
-}
